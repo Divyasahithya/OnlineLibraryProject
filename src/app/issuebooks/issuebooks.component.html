@@ -1,0 +1,65 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+ 
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<body>
+    <div class="container py-5 text-center">
+        <h1 class="display-4 font-weight-bold">ISSUE BOOK FORM</h1>
+        </div>
+ 
+    <div class="container">
+            <div class="main">
+                <div class="main-center">
+                
+                    <form class="" method="post" action="#">
+                        
+                        <div class="form-group">
+                            <label for="Book Callno">Book Callno</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                <input type="text" class="form-control" name="Book Callno" id="Book Callno"  placeholder="" [(ngModel)]="addissuebook.callno"/>
+               
+                            </div>
+                        </div>
+
+ 
+                        <div class="form-group">
+                            <label for= "Id">Student Id</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                    <input type="text" class="form-control" name="Student Id" placeholder="" [(ngModel)]="addissuebook.stu_id"/>
+                            </div>
+                        </div>
+ 
+                        <div class="form-group">
+                            <label for="studentname">Student Name</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                                    <input type="text" class="form-control" name="Student Name" placeholder="" [(ngModel)]="addissuebook.stuname"/>
+                                </div>
+                        </div>
+ 
+                        <div class="form-group">
+                            <label for="phone number">Student Mobile</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                    <input type="text" class="form-control" name="Student Mobile" placeholder="" [(ngModel)]="addissuebook.stu_phone"/>
+                                </div>
+                        </div>
+ 
+                        
+                        <button class="button" (click)="AddIssueBook()">Issue Book</button>
+                        <button class="button float-right" (click)="back()">Back</button>
+                        
+                    </form>
+                </div><!--main-center"-->
+            </div><!--main-->
+        </div><!--container-->
+    </body>
+ 
+ 

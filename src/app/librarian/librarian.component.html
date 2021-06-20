@@ -1,0 +1,116 @@
+<!------ Include the above in your HEAD tag ---------->
+ 
+<!Doctype html>
+<html>
+<head>
+	<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     <meta charset="UTF-8">
+     <title>Registration Form</title>
+     	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+ 
+ <div class="container">
+ 
+ <!---heading---->
+     <header class="heading"> Add Librarian</header>
+	<!---Form starting---->
+	<div class="row ">
+	 <!--- For Name---->
+         <div class="col-sm-12">
+             <div class="row">
+			     <div class="col-xs-4">
+          	         <label class="firstname">First Name :</label> </div>
+		         <div class="col-xs-8">
+              <form [formGroup]="fnameForm">
+		             <input type="text" name="fname" id="fname" placeholder="Enter First Name" class="form-control " formControlName="finame" [(ngModel)]="addlibrarian.fname">
+                 <span class=spanfname ng-if= "finame.invalid && finame.touched">first name is required</span>
+                </form>
+                </div>
+		      </div>
+		 </div>
+ 
+ 
+         <div class="col-sm-12">
+		     <div class="row">
+			     <div class="col-xs-4">
+                     <label class="lastname">Last Name :</label></div>
+				<div class ="col-xs-8">
+                  <form [formGroup]="lnameForm">
+		             <input type="text" name="lname" id="lname" placeholder="Enter  Last Name" class="form-control last" formControlName="liname" [(ngModel)]="addlibrarian.lname">
+                 <span class=spanlname ng-if= "liname.invalid && liname.touched">last name is required</span>
+                </form>
+                </div>
+		     </div>
+		 </div>
+     <!-----For email---->
+		 <div class="col-sm-12">
+		     <div class="row">
+			     <div class="col-xs-4">
+		             <label class="mail" >Email :</label></div>
+			     <div class="col-xs-8"	>
+             <form [formGroup]="emailForm">
+			          <input type="email" name="email"  id="email"placeholder="Enter email" class="form-control" formControlName="emailvalid"  [(ngModel)]="addlibrarian.mail">
+                <span class=spanemail ng-If= "emailvalid.invalid && emailvalid.touched">email is required</span>
+              </form>
+              </div>
+		     </div>
+		 </div>
+	 <!-----For Password and confirm password---->
+          <div class="col-sm-12">
+		         <div class="row">
+				     <div class="col-xs-4">
+ 
+		 	              <label class="pass">Password :</label></div>
+				  <div class="col-xs-8">
+            <form [formGroup]="loginForm">
+			             <input type="password" name="password" id="password" placeholder="Enter Password" formControlName="pass" class="form-control" [(ngModel)]="addlibrarian.password" >
+                  <span class=spanpass ng-if= "pass.invalid && pass.touched">password is required</span>
+                  </form>
+                  </div>
+ 
+          </div>
+		  </div>
+ 
+     <!-----------For Phone number-------->
+     <div class="col-sm-12">
+        <div class="row">
+            <div class="col-xs-4">
+                <label class="mail" >Phone:</label></div>
+            <div class="col-xs-8"	>
+              <form [formGroup]="phoneForm">
+                 <input type="number" name="phone"  id="phone"placeholder="Enter Phone Number" class="form-control" formControlName="phonevalid" [(ngModel)]="addlibrarian.phone" >
+                 <span class=spanphone ng-if= "phonevalid.invalid && phonevalid.touched" >phone number is required</span>
+                </form>
+                </div>
+        </div>
+    </div>
+         <div class="col-sm-12">
+		     <div class ="row">
+                 <div class="col-xs-4 ">
+			       <label class="gender">Gender:</label>
+				 </div>
+ 
+			     <div class="col-xs-4 male">
+				     <input type="radio" name="gender"  id="gender" value="male" [(ngModel)]="addlibrarian.gender">Male
+				 </div>
+ 
+				 <div class="col-xs-4 female">
+				     <input type="radio"  name="gender" id="gender" value="female" [(ngModel)]="addlibrarian.gender">Female
+			     </div>
+ 
+		  	 </div>
+		     <div class="col-sm-12">
+		         <div class="btn btn-warning" (click)="AddLibrarian()">Submit</div>
+		   </div>
+		 </div>
+	 </div>
+ 
+ 
+</div>
+ 
+</body>
+</html>
+ 

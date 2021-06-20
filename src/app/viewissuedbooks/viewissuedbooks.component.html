@@ -1,0 +1,28 @@
+<body><h1>View Issued Books</h1>
+    <table  class="table table-striped table-sm  table-dark" border=1>
+        <thead>
+        <tr>
+            
+            <th >callno</th>
+            <th > Student Id</th>
+            <th >Student Name</th>
+            <th >Phone Number</th>
+            <th>Issue_Date</th>
+        
+        </tr>
+    </thead>
+    <tbody>
+    <tr   *ngFor="let view1 of view">
+        <td>{{ view1.callno }}</td>
+        <td>{{ view1.stu_id }}</td>
+        <td>{{ view1.stuname }}</td>
+        <td>{{ view1.stu_phone}}</td>
+        <td>{{ view1.issue_date}}</td>
+    </tr>
+    </tbody>
+    </table>
+    <div><button type="button" class="but" (click)=back()>Back</button></div>
+    
+
+    </body>
+
