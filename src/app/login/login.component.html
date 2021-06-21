@@ -11,14 +11,14 @@
         <div class="container-fluid">
           <div class="navbar-header">
             <p class="navbar-brand"><img src="../../assets/Images/ICON.gif" width="50" height="50" class="d-inline-block align-top" alt="">ONLINE LIBRARY</p>
-           
+
             <ul class="nav">
               <li ><a routerLink="**">HOME</a></li>
               <li><a >LOGIN</a></li>
              <li><a  routerLink="libpage/viewbook">BOOK DETAILS</a></li>
               <li><a routerLink="aboutus" >ABOUT US</a></li>
             </ul>
-    
+
           </div>
         </div>
       </nav>
@@ -28,17 +28,19 @@
                     <h3>Login as Admin</h3>
                     <form [formGroup]="loginForm">
                         <div class="form-group">
-                            <input type="text"  class="form-control" formControlName="adminuser" placeholder="Username *" name="user"   required  />
+                            <input type="text"  class="form-control" formControlName="adminuser" placeholder="Username *" name="user" [(ngModel)]="user"  required  />
                             <span class="error" *ngIf="loginForm.controls['adminuser'].errors?.required && loginForm.controls['adminuser'].touched" >UserName is Required</span>
-                        
+
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control" formControlName="adminpass" placeholder="Your Password *"  />
+                            <input type="password" class="form-control" formControlName="adminpass" placeholder="Your Password *" name="pass" [(ngModel)]="pass" />
                             <span class="error" *ngIf="loginForm.controls['adminpass'].errors?.required && loginForm.controls['adminpass'].touched" >Password is Required</span>
                         </div>
                         <div class="form-group">
-                            <input type="submit" class="btnSubmit" value="Login" (click)=valid() routerLink='adminpage'/>
+                            <input type="submit" class="btnSubmit" value="Login" />
+                            <div *ngIf="user=='admin' && pass=='admin123' " routerLink='adminpage' (click)="adminLogin()" > </div>
                         </div>
+
                         <div class="form-group">
                             <a href="#" class="ForgetPwd">Forget Password?</a>
                         </div>

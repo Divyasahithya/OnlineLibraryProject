@@ -7,10 +7,13 @@ import { FormControl,FormControlName,FormGroup,Validators } from '@angular/forms
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent  {
-  aduser="";
-  adpass="";
-  ngOnIt():void{
-    
+
+    pass!:string;
+    user!:string;
+
+
+    ngOnIt():void{
+
  }
  loginForm=new FormGroup({
   adminuser:new FormControl("",Validators.required),
@@ -20,21 +23,33 @@ export class LoginComponent  {
 
 
 })
- 
-  
+
+
+
  get adminuser(){return this.loginForm.get('adminuser')}
    valid(): void{
-     if(this.aduser=="admin")
-     alert("Login Successful!!")
+
    }
+
   constructor() {
    }
-   
- }
+
+
+
+  adminLogin(): void{
+
+    if(this.user=="admin" && this.pass=="admin123"){
+      console.log("added");
+    }
+
+
+  }
+}
 
 
 
 
 
 
- 
+
+
