@@ -1,62 +1,64 @@
-import { Component, OnInit } from '@angular/core';
-import { Location } from '@angular/common'
-import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { LibrarianService } from './librarian.service';
-import { addLibrarian } from './addlibrarian';
+import { AddbookComponent } from './../addbook/addbook.component';
+import { addlibrarian } from './addlibrarian';
+import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
+import { NgModule } from '@angular/core';
+
+
+
+import { FormControl, FormGroup, Validators} from '@angular/forms';
+
 @Component({
   selector: 'app-librarian',
   templateUrl: './librarian.component.html',
   styleUrls: ['./librarian.component.css']
 })
 export class LibrarianComponent implements OnInit {
-
-  addlibrarian:addLibrarian = new addLibrarian("","","","",0,"");
+  addlibrarian:addlibrarian = new addlibrarian("","","","",0,"");
   message:any;
   constructor(private location: Location,private librarian:LibrarianService) { }
-  loginForm=new FormGroup({
-    pass:new FormControl('',Validators.required)
-  })
-  fnameForm=new FormGroup({
-    finame:new FormControl('',Validators.required)
-  })
-  lnameForm=new FormGroup({
-    liname:new FormControl('',Validators.required)
-  })
-  emailForm=new FormGroup({
-    emailvalid:new FormControl('',Validators.required)
-  })
-  phoneForm=new FormGroup({
+  wholeForm=new FormGroup({
+    pass:new FormControl('',Validators.required),
+    finame:new FormControl('',Validators.required),
+    liname:new FormControl('',Validators.required),
+    emailvalid:new FormControl('',Validators.required),
     phonevalid:new FormControl('',Validators.required)
   })
+
+
   get finame(){
-    return this.fnameForm.get("finame")
+    return this.wholeForm.get("finame")
   };
   get liname(){
-    return this.lnameForm.get("liname")
+    return this.wholeForm.get("liname")
   }
   get emailvalid() {
-    return this.emailForm.get("emailvalid")
+    return this.wholeForm.get("emailvalid")
   }
   get pass(){
-    return this.loginForm.get("pass")
+    return this.wholeForm.get("pass")
   }
   get phonevalid() {
-    return this.phoneForm.get("phonevalid")
+    return this.wholeForm.get("phonevalid")
   }
- 
+
   ngOnInit(): void {
   }
- 
+
  back(): void {
     this.location.back();
   }
- 
+
 AddLibrarian(): void{
   let resp=this.librarian.Add(this.addlibrarian);
   resp.subscribe((data)=>this.message=data);
   alert("Librarian Added Successfully!!");
- 
-}
+
 }
 
 
+
+
+
+}
