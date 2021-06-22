@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { NavigationExtras } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { FormControl,FormControlName,FormGroup,Validators } from '@angular/forms';
 @Component({
   selector: 'app-login',
@@ -10,9 +11,11 @@ export class LoginComponent  {
 
     pass!:string;
     user!:string;
-
+    libuser!:string;
+    libpass!:string;
 
     ngOnIt():void{
+  
 
  }
  loginForm=new FormGroup({
@@ -27,19 +30,17 @@ export class LoginComponent  {
 
 
  get adminuser(){return this.loginForm.get('adminuser')}
-   valid(): void{
 
-   }
-
-  constructor() {
+  constructor(private router:Router,private route:ActivatedRoute) {
    }
 
 
 
-  adminLogin(): void{
-
-    if(this.user=="admin" && this.pass=="admin123"){
+  adminLogin():any{
+    if(this.user=="admin" && this.pass=="admin123")
+    {
       console.log("added");
+      this.router.navigate(["/adminpage"]);
     }
 
 

@@ -8,11 +8,12 @@ import { ViewserviceService } from './viewservice.service';
   styleUrls: ['./viewlibrarian.component.css']
 })
 export class ViewlibrarianComponent implements OnInit {
-  view!: Libdetails[];
+  public view!: Libdetails[];
+  message:any;
   
   
   constructor(private location:Location, private viewservice:ViewserviceService) { }
-
+  
   ngOnInit(): void {
     this.listlibrarian();
   }
@@ -26,5 +27,9 @@ export class ViewlibrarianComponent implements OnInit {
       }
     )
   }
+  deletelibrarian(id:number){
+    this.viewservice.deleteLibrarian(id).subscribe();
+  }
 
+  
 }

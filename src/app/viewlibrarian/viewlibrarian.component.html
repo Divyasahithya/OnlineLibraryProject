@@ -1,19 +1,20 @@
 <body>
     
-    <h1>Librarain Details</h1>
+    <h1>LIBRARIAN DETAILS</h1>
     <div *ngFor="let view1 of view" class="col-md-4">
         <div class="card mb" id="pick">
           <img class="card-img-top" *ngIf="view1.gender=='male';else myelseblock" src="../../assets/Images/male.png"  height=150px   alt="Card image cap">
          <ng-template #myelseblock> <img class="card-img-top"  src="../../assets/Images/female.webp" height=150px  alt="Card image cap"></ng-template>
           <div class="card-body mb">
+            <h3 class="card-title">{{ view1.id }}</h3>
             <h3 class="card-title">{{ view1.fname }} {{view1.lname}}</h3>
              <h5 class="card-text">Email : {{view1.mail}}</h5>
           <h5 class="card-text">Gender: {{view1.gender}}</h5>
            <h5 class="card-text">Phone: {{view1.phone}}</h5>
-            <button type="button" class="btn btn-primary mb">Delete Librarain</button>
+            <button type="button" class="btn btn-primary mb" (click)="deletelibrarian(view1.id)">Delete Librarian</button>
           </div>
         </div>
-    </div>
+    </div><br>
     <div class="but">
       <button type="button" class="align-self-end btn btn-lg btn-block btn-primary" style="margin-top: auto" (click)="back()">Back</button></div>
 

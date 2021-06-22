@@ -37,8 +37,8 @@
                             <span class="error" *ngIf="loginForm.controls['adminpass'].errors?.required && loginForm.controls['adminpass'].touched" >Password is Required</span>
                         </div>
                         <div class="form-group">
-                            <input type="submit" class="btnSubmit" value="Login" />
-                            <div *ngIf="user=='admin' && pass=='admin123' " routerLink='adminpage' (click)="adminLogin()" > </div>
+                            <input type="button" class="btnSubmit" value="Login" (click)="adminLogin()" />
+                           
                         </div>
 
                         <div class="form-group">
@@ -50,15 +50,15 @@
                     <h3>Login As Librarian</h3>
                     <form [formGroup]="loginForm">
                         <div class="form-group">
-                            <input type="text" class="form-control" formControlName="libuser" placeholder="Username *" value=""  />
+                            <input type="text" class="form-control" formControlName="libuser" placeholder="Username *" value="" [(ngModel)]="libuser"  />
                             <span class="error" *ngIf="loginForm.controls['libuser'].errors?.required && loginForm.controls['libuser'].touched" >UserName is Required</span>
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control"  formControlName="libpass"placeholder="Your Password *" value="" />
+                            <input type="password" class="form-control"  formControlName="libpass"placeholder="Your Password *" value="" [(ngModel)]="libpass" />
                             <span class="error" *ngIf="loginForm.controls['libpass'].errors?.required && loginForm.controls['libpass'].touched" >Password is Required</span>
                         </div>
                         <div class="form-group">
-                            <input type="submit" class="btnSubmit"  routerLink="libpage"value="Login"  />
+                            <input type="submit" class="btnSubmit" value="Login"  />
                         </div>
                         <div class="form-group">
 

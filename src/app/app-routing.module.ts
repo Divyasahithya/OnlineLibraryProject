@@ -33,8 +33,8 @@ const routes: Routes = [
     {path:'home/login/libpage/viewbook',component:ViewbooksComponent},
     {path:'home/login/libpage/issuebook',component:IssuebooksComponent},
     {path:'home/login/libpage/viewissuebook',component:ViewissuedbooksComponent},
-    {path:'home/login/libpage/returnbook',component:ReturnbookComponent},
-    { path: '**', redirectTo: 'home' },
+    {path:'home/login/libpage/returnbook',component:ReturnbookComponent}
+   
     ];
 
 @NgModule({

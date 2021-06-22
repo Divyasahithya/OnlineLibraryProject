@@ -23,7 +23,8 @@ export class LibrarianComponent implements OnInit {
     finame:new FormControl('',Validators.required),
     liname:new FormControl('',Validators.required),
     emailvalid:new FormControl('',Validators.required),
-    phonevalid:new FormControl('',Validators.required)
+    phonevalid:new FormControl('',Validators.required),
+    gender:new FormControl('',Validators.required)
   })
 
 
@@ -42,7 +43,9 @@ export class LibrarianComponent implements OnInit {
   get phonevalid() {
     return this.wholeForm.get("phonevalid")
   }
-
+  get gender() {
+    return this.wholeForm.get("gender")
+  }
   ngOnInit(): void {
   }
 

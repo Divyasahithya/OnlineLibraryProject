@@ -1,4 +1,4 @@
-ss
+
 <!------ Include the above in your HEAD tag ---------->
 
 <!Doctype html>
@@ -8,7 +8,7 @@ ss
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
      <meta charset="UTF-8">
-     <title>Registration Form</title>
+   
      	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
@@ -27,7 +27,7 @@ ss
           	         <label class="firstname">First Name :</label> </div>
 		         <div class="col-xs-8">
 
-		             <input type="text"  ngModel pattern="[a-zA-Z ]*" name="fname" id="fname" placeholder="Enter First Name" class="form-control " formControlName="finame" [(ngModel)]="addlibrarian.fname">
+		             <input type="text"  pattern="[a-zA-Z ]*"  id="fname" placeholder="Enter First Name" class="form-control first " formControlName="finame" [(ngModel)]="addlibrarian.fname">
                  <span class=spanfname *ngIf=" wholeForm.controls['finame'].errors?.required  && wholeForm.controls['finame'].touched ">first name is required</span>
                 <span class=spanfname *ngIf="wholeForm.controls['finame'].errors?.pattern && wholeForm.controls['finame'].touched">first name is not in format</span>
 
@@ -42,7 +42,7 @@ ss
                      <label class="lastname">Last Name :</label></div>
 				<div class ="col-xs-8">
 
-		             <input type="text"  ngModel pattern="[a-zA-Z ]*" name="lname" id="lname" placeholder="Enter  Last Name" class="form-control last" formControlName="liname" [(ngModel)]="addlibrarian.lname">
+		             <input type="text"   pattern="[a-zA-Z ]*" name="lname" id="lname" placeholder="Enter  Last Name" class="form-control last" formControlName="liname" [(ngModel)]="addlibrarian.lname">
                  <span class=spanlname *ngIf=" wholeForm.controls['liname'].errors?.required  && wholeForm.controls['liname'].touched ">first name is required</span>
                 <span class=spanlname *ngIf="wholeForm.controls['liname'].errors?.pattern && wholeForm.controls['liname'].touched">last name is not in format</span>
 
@@ -56,7 +56,7 @@ ss
 		             <label class="mail" >Email :</label></div>
 			     <div class="col-xs-8"	>
 
-			          <input type="email" ngModel pattern="^[A-Za-z0-9_.-]+@[A-Za-z]+.com$" name="email"  id="email"placeholder="Enter email" class="form-control" formControlName="emailvalid"  [(ngModel)]="addlibrarian.mail">
+			          <input type="email"  pattern="^[A-Za-z0-9_.-]+@[A-Za-z]+.com$" name="email"  id="email"placeholder="Enter email" class="form-control" formControlName="emailvalid"  [(ngModel)]="addlibrarian.mail">
                 <span class=spanemail *ngIf=" wholeForm.controls['emailvalid'].errors?.required  && wholeForm.controls['emailvalid'].touched ">email name is required</span>
                 <span class=spanemail *ngIf="wholeForm.controls['emailvalid'].errors?.pattern && wholeForm.controls['emailvalid'].touched">email is not in format</span>
 
@@ -71,7 +71,7 @@ ss
 		 	              <label class="pass">Password :</label></div>
 				  <div class="col-xs-8">
 
-			             <input type="password" ngModel pattern="^[A-Za-z]*" name="password" id="password" placeholder="Enter Password" formControlName="pass" class="form-control" [(ngModel)]="addlibrarian.password" >
+			             <input type="password"  pattern="^[A-Za-z]*" name="password" id="password" placeholder="Enter Password" formControlName="pass" class="form-control" [(ngModel)]="addlibrarian.password" >
                    <span class=spanpass *ngIf=" wholeForm.controls['pass'].errors?.required  && wholeForm.controls['pass'].touched ">password is required</span>
                    <span class=spanpass *ngIf="wholeForm.controls['pass'].errors?.pattern && wholeForm.controls['pass'].touched">password is not in format</span>
 
@@ -87,7 +87,7 @@ ss
                 <label class="mail" >Phone:</label></div>
             <div class="col-xs-8"	>
 
-                 <input type="number" name="phone" ngModel pattern="[6-9][0-9]{9}"  id="phone"placeholder="Enter Phone Number" class="form-control" formControlName="phonevalid" [(ngModel)]="addlibrarian.phone" >
+                 <input type="number" name="phone" pattern="[6-9][0-9]{9}"  id="phone"placeholder="Enter Phone Number" class="form-control" formControlName="phonevalid" [(ngModel)]="addlibrarian.phone" >
                  <span class=spanemail *ngIf=" wholeForm.controls['phonevalid'].errors?.required  && wholeForm.controls['phonevalid'].touched ">phone number is required</span>
                 <span class=spanemail *ngIf="wholeForm.controls['phonevalid'].errors?.pattern && wholeForm.controls['phonevalid'].touched">phone number is not in format</span>
 
@@ -102,30 +102,20 @@ ss
 				 </div>
 
 			     <div class="col-xs-4 male">
-				     <input type="radio" name="gender"  id="gender" value="male" [(ngModel)]="addlibrarian.gender">Male
+				     <input type="radio" name="gender"  id="gender1" value="male" formControlName="gender" [(ngModel)]="addlibrarian.gender">Male
 				 </div>
 
 				 <div class="col-xs-4 female">
-				     <input type="radio"  name="gender" id="gender" value="female" [(ngModel)]="addlibrarian.gender">Female
+				     <input type="radio"  name="gender" id="gender" value="female"  formControlName="gender" [(ngModel)]="addlibrarian.gender">Female
 			     </div>
-
-
-
-
-           <div><button type="submit" class="myDIV" [disabled]="wholeForm.invalid" type="submit" (click)="AddLibrarian()">ADD LIBRARIAN</button></div>
-           <div><button class="btn btn-lg btn-primary" type="submit" (click)="back()">BACK</button></div>
+           <div><button type="submit"  class="btn btn-lg btn-primary" [disabled]="wholeForm.invalid" type="submit" (click)="AddLibrarian()">ADD LIBRARIAN</button></div><br>
+           <div><button class="btn btn-lg btn-primary"   type="submit" (click)="back()">BACK</button></div>
 			<div class="hide">Complete the form to enable submit</div>
-
-
-
 		   </div>
 		 </div>
 	 </div>
-
-
 </div>
-<div class="myDIV">hover on me</div>
-           <div class="hide">COmplete the fform to enable submnit</div>
+
   </form>
 </body>
 </html>
