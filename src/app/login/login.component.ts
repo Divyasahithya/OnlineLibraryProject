@@ -34,6 +34,19 @@ export class LoginComponent  {
 
   constructor(private router:Router,private route:ActivatedRoute,private lib:ViewserviceService) {
    }
+ /*get loginuser(){return this.loginForm.get('loginuser')}
+
+   constructor(private router:Router,private route:ActivatedRoute,private lib:ViewserviceService){
+
+   }*/
+
+
+   libLogin():any{
+     if(this.libuser=="lib" && this.libpass=="lib123") {
+       console.log("lib added");
+       this.router.navigate(["./libpage"],{relativeTo:this.route});
+     }
+   }
 
 
 
