@@ -16,7 +16,7 @@
             <div class="sign-in-htm">
                 <div class="group">
                     <label for="user" class="label">Callno</label>
-                    <input id="user" type="text" class="input" [(ngModel)]=callno>
+                    <input id="user" type="text" class="input">
                     <span  *ngIf="returnForm.controls['Callno'].errors?.required && returnForm.controls['Callno'].touched" >
                         CALLNO is required.
                    </span>
@@ -26,11 +26,11 @@
                 </div>
                 <div class="group">
                     <label class="label">Student-id</label>
-                    <input id="pass" type="text" class="input" [(ngModel)]=studentid >
-                    <span class="issue" *ngIf="returnForm.controls['name'].errors?.required && returnForm.controls['name'].touched" >
+                    <input id="pass" type="text" class="input" >
+                    <span class="issue" *ngIf="returnForm.controls['studentid'].errors?.required && returnForm.controls['studentid'].touched" >
                         STUDENT Id is required.
                    </span>
-                   <span class="issue" *ngIf="returnForm.controls['name'].errors?.pattern && returnForm.controls['name'].touched" >
+                   <span class="issue" *ngIf="returnForm.controls['studentid'].errors?.pattern && returnForm.controls['studentid'].touched" >
                     Invalid format.
                </span>
                 </div>
