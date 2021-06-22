@@ -158,5 +158,8 @@ span{
       span{
         color: red;
     }
+    .warn span{
+        color: white;
+    }
       
       

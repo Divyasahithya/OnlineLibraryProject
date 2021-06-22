@@ -16,44 +16,68 @@
             <div class="main">
                 <div class="main-center">
                 
-                    <form class="" method="post" action="#">
+                    <form  [formGroup]="issuebook">
                         
                         <div class="form-group">
                             <label for="Book Callno">Book Callno</label>
                                 <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                <input type="text" class="form-control" name="Book Callno" id="Book Callno"  placeholder="" [(ngModel)]="addissuebook.callno"/>
-               
+                                    
+                <input type="text" class="form-control" name="Book Callno" id="Book Callno"  placeholder="" [(ngModel)]="addissuebook.callno" formControlName="Callno" required  pattern="[A-Z]{1}[/-]{1}[0-9]*"/>
+                <span class="issue" *ngIf="issuebook.controls['Callno'].errors?.required && issuebook.controls['Callno'].touched" >
+                   BOOK CALLNO is required.
+               </span>
+               <span  class="issue" *ngIf="issuebook.controls['Callno'].errors?.pattern && issuebook.controls['Callno'].touched" >
+                Invalid format.[Ex:a-2]
+           </span>
                             </div>
                         </div>
-
+ 
  
                         <div class="form-group">
                             <label for= "Id">Student Id</label>
                                 <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-                                    <input type="text" class="form-control" name="Student Id" placeholder="" [(ngModel)]="addissuebook.stu_id"/>
-                            </div>
+                                    
+                                    <input type="text" class="form-control" name="Student Id" placeholder="" [(ngModel)]="addissuebook.stu_id" formControlName="student" required  pattern="[0-9]*"/>
+                                    <span class="issue" *ngIf="issuebook.controls['student'].errors?.required && issuebook.controls['student'].touched" >
+                                        STUDENT-ID is required.
+                                   </span>
+                                   <span class="issue"  *ngIf="issuebook.controls['student'].errors?.pattern && issuebook.controls['student'].touched" >
+                                    Invalid format.[Ex:1]
+                               </span>
+                                </div>
                         </div>
  
                         <div class="form-group">
                             <label for="studentname">Student Name</label>
                                 <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                                    <input type="text" class="form-control" name="Student Name" placeholder="" [(ngModel)]="addissuebook.stuname"/>
+                                    
+                                    <input type="text" class="form-control" name="Student Name" placeholder="" [(ngModel)]="addissuebook.stuname" formControlName="name" required  pattern="[a-zA-Z]*"/>
+                                    <span class="issue" *ngIf="issuebook.controls['name'].errors?.required && issuebook.controls['name'].touched" >
+                                        STUDENT NAME is required.
+                                   </span>
+                                   <span class="issue" *ngIf="issuebook.controls['name'].errors?.pattern && issuebook.controls['name'].touched" >
+                                    Invalid format.[Ex:sita]
+                               </span>
                                 </div>
                         </div>
  
                         <div class="form-group">
                             <label for="phone number">Student Mobile</label>
                                 <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-                                    <input type="text" class="form-control" name="Student Mobile" placeholder="" [(ngModel)]="addissuebook.stu_phone"/>
+                                    
+                                    <input type="text" class="form-control" name="Student Mobile" placeholder="" [(ngModel)]="addissuebook.stu_phone" formControlName="mobile" required  pattern="[7-9]{1}[0-9]{9}"/>
+                                    <span class="issue" *ngIf="issuebook.controls['mobile'].errors?.required && issuebook.controls['mobile'].touched" >
+                                        STUDENT MOBILE is required.
+                                   </span>
+                                   <span  class="issue" *ngIf="issuebook.controls['mobile'].errors?.pattern && issuebook.controls['mobile'].touched" >
+                                    Invalid format.[Ex:9123456123]
+                               </span>
                                 </div>
                         </div>
  
+                        <p class="submit">  Complete the form to enable submit!! </p>
+                        <button class="button" [disabled]="!issuebook.valid" (click)="AddIssueBook()">Issue Book</button>
                         
-                        <button class="button" (click)="AddIssueBook()">Issue Book</button>
                         <button class="button float-right" (click)="back()">Back</button>
                         
                     </form>

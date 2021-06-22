@@ -3,6 +3,7 @@ import { Location } from '@angular/common';
 import { issuebook } from '../issuebooks/issuebook';
 import { ViewissueserviceService } from '../viewissuedbooks/viewissueservice.service';
 import { ReturnserviceService } from './returnservice.service';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 @Component({
   selector: 'app-returnbook',
   templateUrl: './returnbook.component.html',
@@ -11,7 +12,11 @@ import { ReturnserviceService } from './returnservice.service';
 export class ReturnbookComponent implements OnInit {
  callno!:string;
  studentid!: number;
-
+ returnForm = new FormGroup(
+  {
+    Callno:new FormControl('',[Validators.required]),
+    student:new FormControl('',[Validators.required]),
+  })
  book!:issuebook[];
   constructor(private location:Location,private returnBook:ReturnserviceService) { 
    
@@ -31,6 +36,7 @@ return():void
         if(b.callno==this.callno && b.stu_id==this.studentid)
         { 
            flag=1;
+           b.returnstatus="yes";
            break;
       } }
       if(flag=0)

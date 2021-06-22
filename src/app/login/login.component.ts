@@ -40,7 +40,7 @@ export class LoginComponent  {
     if(this.user=="admin" && this.pass=="admin123")
     {
       console.log("added");
-      this.router.navigate(["/adminpage"]);
+      this.router.navigate(["/libpage"]);
     }
 
 

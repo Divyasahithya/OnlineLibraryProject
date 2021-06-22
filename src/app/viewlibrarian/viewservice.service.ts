@@ -23,9 +23,9 @@ getLibrarian():Observable<Libdetails[]>{
 }
 
 
-public deleteLibrarian(id:number) {
+public deleteLibrarian(id:string) {
 
-  return this.httpClient.delete(this.baseUrl +"/"+id );
+  return this.httpClient.delete(this.baseUrl +"/"+id);
 }
 }
 interface GetResponse{
