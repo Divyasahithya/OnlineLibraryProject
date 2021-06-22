@@ -1,3 +1,4 @@
+import { ViewserviceService } from './../viewlibrarian/viewservice.service';
 import { Component, OnInit } from '@angular/core';
 import { NavigationExtras } from '@angular/router';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -15,7 +16,7 @@ export class LoginComponent  {
     libpass!:string;
 
     ngOnIt():void{
-  
+
 
  }
  loginForm=new FormGroup({
@@ -31,7 +32,7 @@ export class LoginComponent  {
 
  get adminuser(){return this.loginForm.get('adminuser')}
 
-  constructor(private router:Router,private route:ActivatedRoute) {
+  constructor(private router:Router,private route:ActivatedRoute,private lib:ViewserviceService) {
    }
 
 
@@ -40,7 +41,7 @@ export class LoginComponent  {
     if(this.user=="admin" && this.pass=="admin123")
     {
       console.log("added");
-      this.router.navigate(["/libpage"]);
+      this.router.navigate(["./adminpage"],{relativeTo:this.route});
     }
 
 
