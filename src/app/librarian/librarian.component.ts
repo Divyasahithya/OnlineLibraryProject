@@ -15,7 +15,7 @@ import { FormControl, FormGroup, Validators} from '@angular/forms';
   styleUrls: ['./librarian.component.css']
 })
 export class LibrarianComponent implements OnInit {
-  addlibrarian:addlibrarian = new addlibrarian("","","","",0,"");
+  addlibrarian:addlibrarian = new addlibrarian("","","","",'',"");
   message:any;
   constructor(private location: Location,private librarian:LibrarianService) { }
   wholeForm=new FormGroup({

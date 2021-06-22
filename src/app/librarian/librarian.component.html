@@ -8,7 +8,7 @@
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
      <meta charset="UTF-8">
-   
+
      	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
@@ -87,7 +87,7 @@
                 <label class="mail" >Phone:</label></div>
             <div class="col-xs-8"	>
 
-                 <input type="number" name="phone" pattern="[6-9][0-9]{9}"  id="phone"placeholder="Enter Phone Number" class="form-control" formControlName="phonevalid" [(ngModel)]="addlibrarian.phone" >
+                 <input type="text" name="phone" pattern="[6-9][0-9]{9}"  id="phone"placeholder="Enter Phone Number" class="form-control" formControlName="phonevalid" [(ngModel)]="addlibrarian.phone" >
                  <span class=spanemail *ngIf=" wholeForm.controls['phonevalid'].errors?.required  && wholeForm.controls['phonevalid'].touched ">phone number is required</span>
                 <span class=spanemail *ngIf="wholeForm.controls['phonevalid'].errors?.pattern && wholeForm.controls['phonevalid'].touched">phone number is not in format</span>
 
