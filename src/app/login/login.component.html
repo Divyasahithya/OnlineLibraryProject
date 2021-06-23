@@ -40,29 +40,21 @@
                             <input type="button" class="btnSubmit" value="Login" (click)="adminLogin()" />
                            
                         </div>
-
-                        <div class="form-group">
-                            <a href="#" class="ForgetPwd">Forget Password?</a>
-                        </div>
                     </form>
                 </div>
                 <div class="col-md-6 login-form-2">
                     <h3>Login As Librarian</h3>
                     <form [formGroup]="loginForm">
                         <div class="form-group">
-                            <input type="text" class="form-control" formControlName="libuser" placeholder="Username *" value="" [(ngModel)]="libuser"  />
+                            <input type="text" class="form-control" formControlName="libuser" placeholder="Username *" value="" [(ngModel)]="Libuser"  />
                             <span class="error" *ngIf="loginForm.controls['libuser'].errors?.required && loginForm.controls['libuser'].touched" >UserName is Required</span>
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control"  formControlName="libpass"placeholder="Your Password *" value="" [(ngModel)]="libpass" />
+                            <input type="password" class="form-control"  formControlName="libpass"placeholder="Your Password *" value="" [(ngModel)]="Libpass" />
                             <span class="error" *ngIf="loginForm.controls['libpass'].errors?.required && loginForm.controls['libpass'].touched" >Password is Required</span>
                         </div>
                         <div class="form-group">
-                            <input type="submit" class="btnSubmit" value="Login"  />
-                        </div>
-                        <div class="form-group">
-
-                            <a href="#" class="ForgetPwd" value="Login">Forget Password?</a>
+                            <input type="button" class="btnSubmit" value="Login"  (click)="LibLogin()" />
                         </div>
                     </form>
                 </div>

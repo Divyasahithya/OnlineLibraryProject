@@ -45,4 +45,6 @@ span.input-group-addon i {
 .button {border-radius: 600px;
 min-height: max-content;
 min-width: max-content;}
- 
+ .submit{
+     color: white;
+ }

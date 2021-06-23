@@ -27,9 +27,13 @@ export class ViewlibrarianComponent implements OnInit {
       }
     )
   }
-  deletelibrarian(id:number){
+  deletelibrarian(id:string){
+    if(confirm("Are you sure to delete???"))
+    {
     this.viewservice.deleteLibrarian(id).subscribe();
+    alert("Librarian Deleted Successfully!!");
+    this.listlibrarian();
   }
-
+  }
   
 }
