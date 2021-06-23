@@ -1,0 +1,36 @@
+
+li img{
+  width: 200px;
+  height: 100%;
+
+}
+.val{
+  font-weight: bold;
+  font-size: x-large;
+}
+.an-2 {
+  font-weight: bold;
+  font-size:30px;
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+.c2 {
+  
+  font-weight: bold;
+  font-size:30px;
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.c2 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+ 
+p{
+    font-size: xx-large;
+    font-weight: bold;
+}
+
