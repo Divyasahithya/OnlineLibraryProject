@@ -3,7 +3,6 @@ import { Component, OnInit } from '@angular/core';
 import { NavigationExtras } from '@angular/router';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormControl,FormControlName,FormGroup,Validators } from '@angular/forms';
-//import { ViewserviceService } from '../viewlibrarian/viewservice.service';
 import { Libdetails } from '../viewlibrarian/libdetails';
 @Component({
   selector: 'app-login',
@@ -42,11 +41,11 @@ export class LoginComponent  {
   adminLogin():any{
     if(this.user=="admin" && this.pass=="admin123")
     {
-
-      this.router.navigate(["./adminpage"],{ relativeTo: this.route });
+     this.router.navigate(["./adminpage"],{ relativeTo: this.route });
     }
     else{
       alert("Invalid Username  or Password!!")
+
     }
 
 
