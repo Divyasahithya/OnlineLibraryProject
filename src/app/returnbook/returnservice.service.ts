@@ -4,7 +4,6 @@ import { Observable } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { issuebook } from '../issuebooks/issuebook';
 import { ViewissueserviceService } from '../viewissuedbooks/viewissueservice.service';
-
 @Injectable({
   providedIn: 'root'
 })
@@ -16,14 +15,12 @@ export class ReturnserviceService {
   returnbook(): issuebook[]{
     this.viewissue.getIssueBook().subscribe(
       data =>{this.book=data}
-     
-      )
+     )
       return this.book;
   }
   updateStatus(b:issuebook): Observable<void> {
     return this.httpClient.put<void>(this.baseUrl +"/"+b.dummy, b)
-     
-  }
+    }
 }
 
 

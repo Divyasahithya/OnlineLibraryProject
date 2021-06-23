@@ -9,9 +9,7 @@ import { ViewissueserviceService } from './viewissueservice.service';
 })
 export class ViewissuedbooksComponent implements OnInit {
   view:Issuebooksview[]=[
-    
-  
-  ];
+    ];
 
   constructor(private location:Location, private viewissue:ViewissueserviceService) { }
 

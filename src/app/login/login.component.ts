@@ -17,28 +17,18 @@ export class LoginComponent  {
     Libpass!:string;
     librarian:Libdetails[]=[];
     ngOnIt():void{
-
-
- }
+}
  loginForm=new FormGroup({
   adminuser:new FormControl("",Validators.required),
   adminpass:new FormControl("",Validators.required),
   libuser:new FormControl("",Validators.required),
   libpass:new FormControl("",Validators.required)
-
-
 })
-
-
-
- get adminuser(){return this.loginForm.get('adminuser')}
+get adminuser(){return this.loginForm.get('adminuser')}
 
   constructor(private router:Router,private route:ActivatedRoute,private lib:ViewserviceService) {
    }
-
-
-
-  adminLogin():any{
+adminLogin():any{
     if(this.user=="admin" && this.pass=="admin123")
     {
      this.router.navigate(["./adminpage"],{ relativeTo: this.route });
@@ -47,9 +37,7 @@ export class LoginComponent  {
       alert("Invalid Username  or Password!!")
 
     }
-
-
-  }
+}
   LibLogin(): void{
     let flag=0;
     this.lib.getLibrarian().subscribe(

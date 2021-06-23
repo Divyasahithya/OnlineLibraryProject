@@ -7,7 +7,6 @@ import { ViewbookserviceService } from '../viewbooks/viewbookservice.service';
 import { Viewbooks } from '../viewbooks/viewbooks';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 HttpErrorResponse
-
 @Component({
   selector: 'app-issuebooks',
   templateUrl: './issuebooks.component.html',

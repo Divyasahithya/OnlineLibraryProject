@@ -1,12 +1,8 @@
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
- 
-<!--
-    you can substitue the span of reauth email for a input with the email and
-    include the remember me checkbox
-    --><body>
+
+    <body>
       <div class="sandbox sandbox-correct-pronounciation">
       <h1 class="heading heading-correct-pronounciation">ADD BOOKS</h1></div>
       
@@ -27,7 +23,7 @@
      </span>
                 </div>
  
-                <input type="text" id="input" class="form-control"  formControlName="Name" placeholder="NAME"  required pattern=[a-zA-Z]*  [(ngModel)]="addbook.name">
+                <input type="text" id="input" class="form-control"  formControlName="Name" placeholder="NAME"  required pattern="[a-zA-Z\s-, ]*"  [(ngModel)]="addbook.name">
                     <span><div *ngIf="addbookForm.controls['Name'].errors?.required && addbookForm.controls['Name'].touched">
                         NAME is required.
                       </div></span>
@@ -35,18 +31,19 @@
                       Invalid Format of Name.
                       </div></span>
                 
-                <input type="text" id="input" class="form-control"  formControlName="Author" placeholder="AUTHOR" required pattern="[A-Za-z]*" [(ngModel)]="addbook.author">
-                <div *ngIf="addbookForm.controls['Author'].errors?.required && addbookForm.controls['Author'].errors?.touched" >
+                <input type="text" id="input" class="form-control"  formControlName="Author" placeholder="AUTHOR" required pattern="[a-zA-Z\s-, ]*" [(ngModel)]="addbook.author">
+                <div *ngIf="addbookForm.controls['Author'].errors?.required && addbookForm.controls['Author'].touched" >
                    <span> 
                        AUTHOR  is required.
                       </span>
+                      
                 </div>
-                <div *ngIf="addbookForm.controls['Author'].errors?.pattern && addbookForm.controls['Author'].errors?.touched" >
+                <div *ngIf="addbookForm.controls['Author'].errors?.pattern && addbookForm.controls['Author'].touched" >
                   <span> 
                       Invalid Format of AUTHOR.
                      </span>
                </div>
-                <input type="text" id="input" class="form-control"  formControlName="Publisher" placeholder="PUBLISHER" required pattern="[A-Za-z]*" [(ngModel)]="addbook.publisher">
+                <input type="text" id="input" class="form-control"  formControlName="Publisher" placeholder="PUBLISHER" required pattern="[a-zA-Z\s-, ]*" [(ngModel)]="addbook.publisher">
              
                 <span><div *ngIf="addbookForm.controls['Publisher'].errors?.required && addbookForm.controls['Publisher'].touched">
                         PUBLISHER is required.
@@ -69,5 +66,6 @@
                 
             </form><!-- /form -->
         </div><!-- /card-container -->
-    </div><!-- /container -->
+    </div>
+    
   </body>

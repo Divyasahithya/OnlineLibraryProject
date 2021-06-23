@@ -1,5 +1,4 @@
 body{
-    
     background-image: url("../../assets/Images/issuebook.jpg");
     background-repeat:no-repeat;
     background-size:cover;
@@ -12,9 +11,7 @@ h1{
     padding: top 100px;
     padding-left: 25px;
     color:wheat;
- 
-    
-}
+ }
 .main{
     padding: 40px 0;
 }
@@ -48,3 +45,12 @@ min-width: max-content;}
  .submit{
      color: white;
  }
+ footer{ 
+    position:absolute; 
+    bottom:0; 
+     color:black; 
+     text-align: center;
+    
+     font-size: small;
+     right:45%;
+  }

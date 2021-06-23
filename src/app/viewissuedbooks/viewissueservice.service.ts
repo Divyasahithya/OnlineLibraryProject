@@ -16,8 +16,6 @@ export class ViewissueserviceService {
     );
   }
 }
-
-
 interface GetResponse{
   _embedded:{
     issueBooks:Issuebooksview[];
