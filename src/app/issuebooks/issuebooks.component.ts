@@ -16,7 +16,7 @@ HttpErrorResponse
 export class IssuebooksComponent implements OnInit {
  book:Viewbooks[]=[];
   constructor(private location:Location,private booksissued:IssueserviceService,private bookservice:ViewbookserviceService) { }
-  addissuebook:issuebook = new issuebook("",0,"","","no");
+  addissuebook:issuebook = new issuebook(0,"",0,"","","no");
   message:any;
   issuebook = new FormGroup(
     {
@@ -37,7 +37,7 @@ export class IssuebooksComponent implements OnInit {
     return this.issuebook.get('name')?.value
   }
   get mobile(){ 
-    return this.issuebook.get('publisher')?.value
+    return this.issuebook.get('mobile')?.value
   }
 
   ngOnInit(): void {
