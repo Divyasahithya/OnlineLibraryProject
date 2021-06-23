@@ -41,7 +41,6 @@ h2 {
     font-weight: normal;
     color: #106fb8;
 }
-
 h3 {
     margin: 0   ;
     padding: 2px 0;
@@ -49,23 +48,19 @@ h3 {
     font-weight: bold;
     color: #3e464d;
 }
-
 #templatemo_content_wrapper {
     width: 920px;
     padding: 30px;
     margin: 0 auto;
 }
-
 #templatemo_sidebar {
     float: left;
     width: 270px;
 }
-
 .sidebar_box {
     padding: 20px 30px;
     background: #fff;
     height:400px;
-
 }
 .side1{
     padding: 20px 30px;
@@ -77,17 +72,14 @@ h3 {
     height: 15px;
     margin-bottom: 30px;
 }
-
 .news_box .post_info {
     font-size: 11px;
     color: #666666;
 }
-
 .news_box .post_info a {
     color: #157ad2;
     font-weight: normal;
 }
-
 .news_box a{
     color: #000000;
     font-weight: normal;
@@ -101,7 +93,6 @@ h3 {
     float:right;
     width: 590px;
 }
-
 .content_box {
     clear: both;
     width: 700px;
@@ -109,7 +100,6 @@ h3 {
     background: #fff;
     margin-left:30px;
 }
-
 .content_box_bottom {
     font-size: small;
     width: 600px;
@@ -135,7 +125,6 @@ h3 {
 }
 .para1{
     font-size:small;
-
 }
 .para2{
     font-size:small;
@@ -153,7 +142,6 @@ h3 {
     list-style: decimal-leading-zero;
     font-size:small;
 }
-
 .list_01 li {
     color: #008400;
     margin-bottom: 7px;

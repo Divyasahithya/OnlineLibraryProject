@@ -12,7 +12,7 @@
             <div class="sign-in-htm">
                 <div class="group">
                     <label for="user" class="label">Callno</label>
-                    <input id="user" type="text" class="input" formControlName="Callno" [(ngModel)]="callno">
+                    <input id="user" type="text" class="input" formControlName="Callno" required pattern="[A-Z]{1}[/-]{1}[0-9]*" [(ngModel)]="callno">
                     <span  *ngIf="returnForm.controls['Callno'].errors?.required && returnForm.controls['Callno'].touched" >
                         CALLNO is required.
                    </span>
@@ -22,7 +22,7 @@
                 </div>
                 <div class="group">
                     <label class="label">Student-id</label>
-                    <input id="pass" type="text" class="input" formControlName="studentid" [(ngModel)]="Studentid" >
+                    <input id="pass" type="text" class="input" formControlName="studentid"  required  pattern="[0-9]*" [(ngModel)]="Studentid" >
                     <span class="issue" *ngIf="returnForm.controls['studentid'].errors?.required && returnForm.controls['studentid'].touched" >
                         STUDENT Id is required.
                    </span>

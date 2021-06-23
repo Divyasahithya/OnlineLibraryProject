@@ -4,6 +4,8 @@ import { issuebook } from '../issuebooks/issuebook';
 import { ViewissueserviceService } from '../viewissuedbooks/viewissueservice.service';
 import { ReturnserviceService } from './returnservice.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Viewbooks } from '../viewbooks/viewbooks';
+import { FindValueOperator } from 'rxjs/internal/operators/find';
 @Component({
   selector: 'app-returnbook',
   templateUrl: './returnbook.component.html',
@@ -17,14 +19,15 @@ export class ReturnbookComponent implements OnInit {
     Callno:new FormControl('',[Validators.required]),
     studentid:new FormControl('',[Validators.required]),
   })
- book!:issuebook[];
+ Issuebook!:issuebook[];
+ book!:Viewbooks[];
  get Callno(){ 
   return this.returnForm.get('Callno')?.value
 }
 get studentid(){ 
   return this.returnForm.get('studentid')?.value
 }
-  constructor(private location:Location,private returnBook:ReturnserviceService) { 
+  constructor(private location:Location,private returnBook:ReturnserviceService ) { 
    
   }
 
@@ -37,14 +40,15 @@ back():void{
 }
 return():void
   { let flag=0;
+    this.Issuebook=this.returnBook.returnIssuebook();
     this.book=this.returnBook.returnbook();
-      for(let b of this.book){
+      for(let b of this.Issuebook){
         if(b.callno==this.callno && b.stu_id==this.studentid)
         { 
            flag=1;
            b.returnstatus="yes";
-           alert("Book Returned Successfully!!");
            this.returnBook.updateStatus(b).subscribe();
+           this.returnBook.Find(b.callno);
            break;
       } }
       if(flag==0)
@@ -52,7 +56,7 @@ return():void
         alert("Invalid callno or studentid");
       }
       else{
-       
+        alert("Book Returned Successfully!!");
       }
   }
 }
