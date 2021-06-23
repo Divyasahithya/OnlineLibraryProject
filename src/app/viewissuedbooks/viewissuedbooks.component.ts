@@ -28,5 +28,7 @@ export class ViewissuedbooksComponent implements OnInit {
       }
     )
   }
-
+ getisssuebook(){
+   return this.view;
+ }
 }

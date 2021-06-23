@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 body 
 {
@@ -12,6 +13,8 @@ body
     background-image: url("../../assets/Images/page.jpg")
   
 }
+=======
+>>>>>>> f971f2824d17b484dc3da89a523e5779c1c35059
 li,p{
     font-size:large;
 }
@@ -19,6 +22,7 @@ li,p{
         top:0;
       left: 500px;
      position: absolute;
+<<<<<<< HEAD
       
    } 
 button 
@@ -44,6 +48,10 @@ button
 Credit: http://www.templatemo.com
 */
  
+=======
+
+   }
+>>>>>>> f971f2824d17b484dc3da89a523e5779c1c35059
 body {
     margin: 0;
     padding: 0;
@@ -53,6 +61,7 @@ body {
     color: #707b84;
     background-image:url("../../assets/Images/page.jpg");
 }
+<<<<<<< HEAD
         
 a:link, a:visited { color: #0066CC; text-decoration: none; font-weight: normal; } 
 a:active, a:hover { color: #008400; text-decoration: underline; }
@@ -73,12 +82,25 @@ img { margin: 0px; padding: 0px; border: none; }
  
 .cleaner { clear: both; width: 100%; height: 0px; font-size: 0px;  }
  
+=======
+
+.float_l {
+    float: left;
+}
+
+.float_r {
+    float: right;
+}
+.cleaner { clear: both; width: 100%; height: 0px; font-size: 0px;  }
+
+>>>>>>> f971f2824d17b484dc3da89a523e5779c1c35059
 .cleaner_h10 { clear: both; width:100%; height: 10px; }
 .cleaner_h20 { clear: both; width:100%; height: 20px; }
 .cleaner_h30 { clear: both; width:100%; height: 30px; }
 .cleaner_h40 { clear: both; width:100%; height: 40px; }
 .cleaner_h50 { clear: both; width:100%; height: 50px; }
 .cleaner_h60 { clear: both; width:100%; height: 60px; }
+<<<<<<< HEAD
  
 .button_01 a {
     display: block;
@@ -97,6 +119,10 @@ img { margin: 0px; padding: 0px; border: none; }
     color: #ffffff;
 }
  
+=======
+
+
+>>>>>>> f971f2824d17b484dc3da89a523e5779c1c35059
 h2 {
     margin: 0 0 5px 0;
     padding: 10px 0;
@@ -104,7 +130,11 @@ h2 {
     font-weight: normal;
     color: #106fb8;
 }
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> f971f2824d17b484dc3da89a523e5779c1c35059
 h3 {
     margin: 0   ;
     padding: 2px 0;
@@ -112,6 +142,7 @@ h3 {
     font-weight: bold;
     color: #3e464d;
 }
+<<<<<<< HEAD
  
 #templatemo_wrapper {
     width: 980px;
@@ -237,22 +268,37 @@ h3 {
  
 /* content */
  
+=======
+
+>>>>>>> f971f2824d17b484dc3da89a523e5779c1c35059
 #templatemo_content_wrapper {
     width: 920px;
     padding: 30px;
     margin: 0 auto;
 }
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> f971f2824d17b484dc3da89a523e5779c1c35059
 #templatemo_sidebar {
     float: left;
     width: 270px;
 }
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> f971f2824d17b484dc3da89a523e5779c1c35059
 .sidebar_box {
     padding: 20px 30px;
     background: #fff;
     height:400px;
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> f971f2824d17b484dc3da89a523e5779c1c35059
 }
 .side1{
     padding: 20px 30px;
@@ -264,6 +310,7 @@ h3 {
     height: 15px;
     margin-bottom: 30px;
 }
+<<<<<<< HEAD
  
 .news_box {
     padding-bottom: 10px;
@@ -272,20 +319,32 @@ h3 {
     color: #ffffff;
 }
  
+=======
+
+>>>>>>> f971f2824d17b484dc3da89a523e5779c1c35059
 .news_box .post_info {
     font-size: 11px;
     color: #666666;
 }
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> f971f2824d17b484dc3da89a523e5779c1c35059
 .news_box .post_info a {
     color: #157ad2;
     font-weight: normal;
 }
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> f971f2824d17b484dc3da89a523e5779c1c35059
 .news_box a{
     color: #000000;
     font-weight: normal;
 }
+<<<<<<< HEAD
  
 .news_box span {
     color: #157ad2;
@@ -321,11 +380,22 @@ h3 {
     outline: none;
 }
  
+=======
+
+.news_box span {
+    color: #157ad2;
+}
+
+>>>>>>> f971f2824d17b484dc3da89a523e5779c1c35059
 #templatemo_content {
     float:right;
     width: 590px;
 }
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> f971f2824d17b484dc3da89a523e5779c1c35059
 .content_box {
     clear: both;
     width: 700px;
@@ -333,13 +403,18 @@ h3 {
     background: #fff;
     margin-left:30px;
 }
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> f971f2824d17b484dc3da89a523e5779c1c35059
 .content_box_bottom {
     font-size: small;
     width: 600px;
     height: 36px;
     margin-bottom: 20px;
     background-image: url("https://static8.depositphotos.com/1263295/875/i/950/depositphotos_8758503-stock-photo-any-questions.jpg") no-repeat;
+<<<<<<< HEAD
     
 }
  
@@ -349,6 +424,17 @@ h3 {
     
 }
  
+=======
+
+}
+
+.content_box .image_fl {
+    float: left;
+    margin: 3px 15px 0 0;
+
+}
+
+>>>>>>> f971f2824d17b484dc3da89a523e5779c1c35059
 .content_box .section_w250 {
     width: 250px;
     font-size:small;
@@ -359,7 +445,11 @@ h3 {
 }
 .para1{
     font-size:small;
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> f971f2824d17b484dc3da89a523e5779c1c35059
 }
 .para2{
     font-size:small;
@@ -369,15 +459,24 @@ h3 {
     font-size:large;
     text-align: left;
 }
+<<<<<<< HEAD
  
  
+=======
+
+
+>>>>>>> f971f2824d17b484dc3da89a523e5779c1c35059
 .list_01 {
     margin: 0 0 0 20px;
     padding: 0;
     list-style: decimal-leading-zero;
     font-size:small;
 }
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> f971f2824d17b484dc3da89a523e5779c1c35059
 .list_01 li {
     color: #008400;
     margin-bottom: 7px;
@@ -386,6 +485,7 @@ h3 {
 .someclass{
     font-size:small;
 }
+<<<<<<< HEAD
  
 /* end of content */
  
@@ -425,3 +525,12 @@ h3 {
     border: none;
 }
  
+=======
+
+
+
+
+
+
+
+>>>>>>> f971f2824d17b484dc3da89a523e5779c1c35059

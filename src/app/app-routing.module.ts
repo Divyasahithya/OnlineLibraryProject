@@ -34,7 +34,12 @@ const routes: Routes = [
     {path:'home/login/libpage/issuebook',component:IssuebooksComponent},
     {path:'home/login/libpage/viewissuebook',component:ViewissuedbooksComponent},
     {path:'home/login/libpage/returnbook',component:ReturnbookComponent},
+<<<<<<< HEAD
     { path: '**', redirectTo: 'home' },
+=======
+    {path:"**",redirectTo:"home"}
+   
+>>>>>>> f971f2824d17b484dc3da89a523e5779c1c35059
     ];
 
 @NgModule({

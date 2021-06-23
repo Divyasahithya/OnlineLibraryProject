@@ -22,7 +22,11 @@
                 <span  *ngIf="addbookForm.controls['Callno'].errors?.required && addbookForm.controls['Callno'].touched" >
               CALLNO is required.
          </span>
+<<<<<<< HEAD
          <span  *ngIf="addbookForm.controls['Callno'].errors?.pattern" >
+=======
+         <span  *ngIf="addbookForm.controls['Callno'].errors?.pattern && addbookForm.controls['Callno'].touched" >
+>>>>>>> f971f2824d17b484dc3da89a523e5779c1c35059
           Invalid format.[Ex:a-2]
      </span>
                 </div>
@@ -36,12 +40,21 @@
                       </div></span>
                 
                 <input type="text" id="input" class="form-control"  formControlName="Author" placeholder="AUTHOR" required pattern="[A-Za-z]*" [(ngModel)]="addbook.author">
+<<<<<<< HEAD
                 <div *ngIf="addbookForm.controls['Author'].errors?.required && addbookForm.controls['Author'].touched" >
                 <span>  
                        AUTHOR  is required.
                       </span>
                 </div>
                 <div *ngIf="addbookForm.controls['Author'].errors?.pattern && addbookForm.controls['Author'].touched" >
+=======
+                <div *ngIf="addbookForm.controls['Author'].errors?.required && addbookForm.controls['Author'].errors?.touched" >
+                   <span> 
+                       AUTHOR  is required.
+                      </span>
+                </div>
+                <div *ngIf="addbookForm.controls['Author'].errors?.pattern && addbookForm.controls['Author'].errors?.touched" >
+>>>>>>> f971f2824d17b484dc3da89a523e5779c1c35059
                   <span> 
                       Invalid Format of AUTHOR.
                      </span>
@@ -60,16 +73,27 @@
                   <span>  QUANTITY is required.</span>     
                 </div>
                 <div *ngIf="addbookForm.controls['Quantity'].errors?.pattern &&  addbookForm.controls['Quantity'].touched" >
+<<<<<<< HEAD
                   <span>  Invalid quantity.</span>     
                 </div>
  
               <p class="submit"> Complete the form to enable submit!! </p>
+=======
+                  <span>  QUANTITY is required.</span>     
+                </div>
+ 
+              <p class="warn">  <span>Complete the form to enable submit!!  </span></p>
+>>>>>>> f971f2824d17b484dc3da89a523e5779c1c35059
                 <div><button type="submit" class="btn btn-lg btn-primary" [disabled]="!addbookForm.valid" type="submit" (click)="AddBook()">ADD BOOK</button></div>
                 <div><button class="btn btn-lg btn-primary" type="submit" (click)="back()">BACK</button></div>
                 
             </form><!-- /form -->
         </div><!-- /card-container -->
+<<<<<<< HEAD
         <footer>Copyright © Cognizant</footer>
     </div><!-- /container -->
     
+=======
+    </div><!-- /container -->
+>>>>>>> f971f2824d17b484dc3da89a523e5779c1c35059
   </body>

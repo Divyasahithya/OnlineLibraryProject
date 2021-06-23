@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 body 
 {
@@ -73,12 +74,43 @@ img { margin: 0px; padding: 0px; border: none; }
  
 .cleaner { clear: both; width: 100%; height: 0px; font-size: 0px;  }
  
+=======
+li,p{
+  font-size:large;
+}
+h1{
+      top:0;
+    left: 500px;
+   position: absolute;
+
+ }
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.7em;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 12px;
+  color: #707b84;
+  background-image:url("../../assets/Images/page.jpg");
+}
+
+.float_l {
+  float: left;
+}
+
+.float_r {
+  float: right;
+}
+.cleaner { clear: both; width: 100%; height: 0px; font-size: 0px;  }
+
+>>>>>>> f971f2824d17b484dc3da89a523e5779c1c35059
 .cleaner_h10 { clear: both; width:100%; height: 10px; }
 .cleaner_h20 { clear: both; width:100%; height: 20px; }
 .cleaner_h30 { clear: both; width:100%; height: 30px; }
 .cleaner_h40 { clear: both; width:100%; height: 40px; }
 .cleaner_h50 { clear: both; width:100%; height: 50px; }
 .cleaner_h60 { clear: both; width:100%; height: 60px; }
+<<<<<<< HEAD
  
 .button_01 a {
     display: block;
@@ -425,3 +457,142 @@ h3 {
     border: none;
 }
  
+=======
+
+
+h2 {
+  margin: 0 0 5px 0;
+  padding: 10px 0;
+  font-size: 24px;
+  font-weight: normal;
+  color: #106fb8;
+}
+
+h3 {
+  margin: 0   ;
+  padding: 2px 0;
+  font-size: 13px;
+  font-weight: bold;
+  color: #3e464d;
+}
+
+#templatemo_content_wrapper {
+  width: 920px;
+  padding: 30px;
+  margin: 0 auto;
+}
+
+#templatemo_sidebar {
+  float: left;
+  width: 270px;
+}
+
+.sidebar_box {
+  padding: 20px 30px;
+  background: #fff;
+  height:400px;
+
+}
+.side1{
+  padding: 20px 30px;
+  background: #fff;
+  height:250px;
+}
+.sidebar_box_bottom {
+  width: 270px;
+  height: 15px;
+  margin-bottom: 30px;
+}
+
+.news_box .post_info {
+  font-size: 11px;
+  color: #666666;
+}
+
+.news_box .post_info a {
+  color: #157ad2;
+  font-weight: normal;
+}
+
+.news_box a{
+  color: #000000;
+  font-weight: normal;
+}
+
+.news_box span {
+  color: #157ad2;
+}
+
+#templatemo_content {
+  float:right;
+  width: 590px;
+}
+
+.content_box {
+  clear: both;
+  width: 700px;
+  padding: 20px 30px;
+  background: #fff;
+  margin-left:30px;
+}
+
+.content_box_bottom {
+  font-size: small;
+  width: 600px;
+  height: 36px;
+  margin-bottom: 20px;
+  background-image: url("https://static8.depositphotos.com/1263295/875/i/950/depositphotos_8758503-stock-photo-any-questions.jpg") no-repeat;
+
+}
+
+.content_box .image_fl {
+  float: left;
+  margin: 3px 15px 0 0;
+
+}
+
+.content_box .section_w250 {
+  width: 250px;
+  font-size:small;
+  margin-top:0;
+}
+.para{
+  font-size:small;
+}
+.para1{
+  font-size:small;
+
+}
+.para2{
+  font-size:small;
+  margin-top:0;
+}
+.bene{
+  font-size:large;
+  text-align: left;
+}
+
+
+.list_01 {
+  margin: 0 0 0 20px;
+  padding: 0;
+  list-style: decimal-leading-zero;
+  font-size:small;
+}
+
+.list_01 li {
+  color: #008400;
+  margin-bottom: 7px;
+  font-size: small;
+}
+.someclass{
+  font-size:small;
+}
+
+
+
+
+
+
+
+>>>>>>> f971f2824d17b484dc3da89a523e5779c1c35059

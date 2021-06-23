@@ -1,9 +1,19 @@
+<<<<<<< HEAD
 <h1></h1>
 <body>
  
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+=======
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<body>
+ 
+
+>>>>>>> f971f2824d17b484dc3da89a523e5779c1c35059
 <!------ Include the above in your HEAD tag ---------->
  
   <div class="login-wrap">
@@ -11,6 +21,7 @@
         <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">RETURN BOOKS</label>
         <input id="tab-2" type="radio" name="tab" class="for-pwd"><label for="tab-2" class="tab"></label>
         <div class="login-form">
+<<<<<<< HEAD
             <div class="sign-in-htm">
                 <div class="group">
                     <label for="user" class="label">Callno</label>
@@ -22,13 +33,43 @@
                 </div>
                 <div class="group">
                     <input type="submit" class="button" value="Return book">
+=======
+            <form [formGroup]=returnForm>
+            <div class="sign-in-htm">
+                <div class="group">
+                    <label for="user" class="label">Callno</label>
+                    <input id="user" type="text" class="input" formControlName="Callno" [(ngModel)]="callno">
+                    <span  *ngIf="returnForm.controls['Callno'].errors?.required && returnForm.controls['Callno'].touched" >
+                        CALLNO is required.
+                   </span>
+                   <span  *ngIf="returnForm.controls['Callno'].errors?.pattern && returnForm.controls['Callno'].touched" >
+                    Invalid format.[Ex:a-2]
+               </span>
+                </div>
+                <div class="group">
+                    <label class="label">Student-id</label>
+                    <input id="pass" type="text" class="input" formControlName="studentid" [(ngModel)]="Studentid" >
+                    <span class="issue" *ngIf="returnForm.controls['studentid'].errors?.required && returnForm.controls['studentid'].touched" >
+                        STUDENT Id is required.
+                   </span>
+                   <span class="issue" *ngIf="returnForm.controls['studentid'].errors?.pattern && returnForm.controls['studentid'].touched" >
+                    Invalid format.
+               </span>
+                </div>
+                <div class="group">
+                    <input type="submit" class="button" value="Return book" (click)="return()">
+>>>>>>> f971f2824d17b484dc3da89a523e5779c1c35059
                 </div>
                 <div class="group">
                     <input type="submit" class="button" (click)="back()"value="Back">
                 </div>
                 <div class="hr"></div>
             </div>
+<<<<<<< HEAD
             
+=======
+        </form>
+>>>>>>> f971f2824d17b484dc3da89a523e5779c1c35059
         </div>
     </div>
 </div>
