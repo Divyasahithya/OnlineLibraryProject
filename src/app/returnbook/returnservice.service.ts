@@ -21,13 +21,9 @@ export class ReturnserviceService {
       return this.book;
   }
   updateStatus(b:issuebook): Observable<void> {
-    return this.httpClient.put<void>(this.baseUrl, b,{headers: new HttpHeaders({'Content-Type':'application/json'})})
-      .pipe(
-        catchError(this.handleError('update', b))
-      );
+    return this.httpClient.put<void>(this.baseUrl +"/"+b.dummy, b)
+     
   }
 }
-function httpOptions<T>(heroesUrl: any, b: any, httpOptions: any) {
-  throw new Error('Function not implemented.');
-}
+
 
