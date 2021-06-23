@@ -1,25 +1,15 @@
 import { Component, OnInit,AfterViewInit } from '@angular/core';
 declare var anime: any; 
-<<<<<<< HEAD
-
-=======
  
->>>>>>> f971f2824d17b484dc3da89a523e5779c1c35059
 @Component({
   selector: 'app-start',
   templateUrl: './start.component.html',
   styleUrls: ['./start.component.scss']
 })
 export class StartComponent implements AfterViewInit {
-<<<<<<< HEAD
-
-  constructor() { }
-
-=======
  
   constructor() { }
  
->>>>>>> f971f2824d17b484dc3da89a523e5779c1c35059
   ngOnInit(): void {
   }
   ngAfterViewInit(): void {
@@ -27,11 +17,7 @@ export class StartComponent implements AfterViewInit {
  
     let textWrapper = document.querySelector('.c1');
     textWrapper!.innerHTML = textWrapper!.textContent!.replace(/\S/g, "<span class='el' style='display:inline-block;'>$&</span>");
-<<<<<<< HEAD
-
-=======
  
->>>>>>> f971f2824d17b484dc3da89a523e5779c1c35059
 anime.timeline({loop: true})
   .add({
     targets: '.c1 .el',
@@ -46,16 +32,8 @@ anime.timeline({loop: true})
     easing: "easeOutExpo",
     delay: 100
   });
-<<<<<<< HEAD
-
-  }
-
-}
-
-=======
  
   }
  
 }
  
->>>>>>> f971f2824d17b484dc3da89a523e5779c1c35059

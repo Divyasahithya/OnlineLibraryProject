@@ -18,27 +18,9 @@ input.ng-touched{
 input.ng-valid{
   border:2px solid green;
 }
-<<<<<<< HEAD
-footer{ 
-    position:absolute; 
-    bottom:0; 
-     color:#000; 
-     text-align: center;
-    
-     font-size: small;
-     right:45%;
-  }
 span{
     color: red;
 }
- .submit{
-    color: white;
-}
-=======
-span{
-    color: red;
-}
->>>>>>> f971f2824d17b484dc3da89a523e5779c1c35059
     
     .card-container.card {
         max-width: 350px;
@@ -176,11 +158,8 @@ span{
       span{
         color: red;
     }
-<<<<<<< HEAD
-=======
     .warn span{
         color: white;
     }
->>>>>>> f971f2824d17b484dc3da89a523e5779c1c35059
       
       

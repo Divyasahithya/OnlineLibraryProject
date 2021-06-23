@@ -1,28 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
-<<<<<<< HEAD
-=======
 import { issuebook } from '../issuebooks/issuebook';
 import { ViewissueserviceService } from '../viewissuedbooks/viewissueservice.service';
 import { ReturnserviceService } from './returnservice.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
->>>>>>> f971f2824d17b484dc3da89a523e5779c1c35059
 @Component({
   selector: 'app-returnbook',
   templateUrl: './returnbook.component.html',
   styleUrls: ['./returnbook.component.css']
 })
 export class ReturnbookComponent implements OnInit {
-<<<<<<< HEAD
-
-  constructor(private location:Location) { }
-
-  ngOnInit(): void {
-  }
-back():void{
-  this.location.back();
-}
-=======
  callno!:string;
  Studentid!: number;
  returnForm = new FormGroup(
@@ -68,5 +55,4 @@ return():void
        
       }
   }
->>>>>>> f971f2824d17b484dc3da89a523e5779c1c35059
 }

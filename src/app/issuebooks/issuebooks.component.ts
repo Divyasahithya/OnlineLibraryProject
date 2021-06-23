@@ -3,11 +3,8 @@ import { Location } from '@angular/common';
 import { IssueserviceService } from './issueservice.service';
 import { issuebook } from './issuebook';
 import { HttpErrorResponse } from '@angular/common/http';
-<<<<<<< HEAD
-=======
 import { ViewbookserviceService } from '../viewbooks/viewbookservice.service';
 import { Viewbooks } from '../viewbooks/viewbooks';
->>>>>>> f971f2824d17b484dc3da89a523e5779c1c35059
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 HttpErrorResponse
 
@@ -17,29 +14,17 @@ HttpErrorResponse
   styleUrls: ['./issuebooks.component.css']
 })
 export class IssuebooksComponent implements OnInit {
-<<<<<<< HEAD
-
-  constructor(private location:Location,private booksissued:IssueserviceService) { }
-  addissuebook:issuebook = new issuebook("",0,"",0);
-  message:any;
-
-=======
  book:Viewbooks[]=[];
   constructor(private location:Location,private booksissued:IssueserviceService,private bookservice:ViewbookserviceService) { }
   addissuebook:issuebook = new issuebook(0,"",0,"","","no");
   message:any;
->>>>>>> f971f2824d17b484dc3da89a523e5779c1c35059
   issuebook = new FormGroup(
     {
       Callno:new FormControl('',[Validators.required]),
       student:new FormControl('',[Validators.required]),
       name:new FormControl('',[Validators.required]),
       mobile:new FormControl('',[Validators.required])
-<<<<<<< HEAD
-
-=======
  
->>>>>>> f971f2824d17b484dc3da89a523e5779c1c35059
     }
   )
   get callno(){ 
@@ -52,16 +37,7 @@ export class IssuebooksComponent implements OnInit {
     return this.issuebook.get('name')?.value
   }
   get mobile(){ 
-<<<<<<< HEAD
-    return this.issuebook.get('publisher')?.value
-  }
-
-  onSubmit() {
-    // TODO: Use EventEmitter with form value
-    
-=======
     return this.issuebook.get('mobile')?.value
->>>>>>> f971f2824d17b484dc3da89a523e5779c1c35059
   }
 
   ngOnInit(): void {
@@ -70,14 +46,6 @@ back():void{
   this.location.back();
 }
 AddIssueBook(): void{
-<<<<<<< HEAD
-  let resp=this.booksissued.Add(this.addissuebook);
-  resp.subscribe((data)=>this.message=data);
-  alert("Book Issued Successfully!!");
- 
-}
-}
-=======
   let flag=0;
   this.bookservice.getBooks().subscribe(
     data =>{this.book=data}
@@ -98,4 +66,3 @@ if(flag==0){
   alert("Invalid Callno!!!");
 }
 }}
->>>>>>> f971f2824d17b484dc3da89a523e5779c1c35059

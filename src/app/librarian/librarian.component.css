@@ -125,20 +125,12 @@ margin-top: 6px;
     box-shadow: 0px 2px 2px 0px white;
         
   }
-<<<<<<< HEAD
-.btn.btn-warning:hover {
-=======
 .btn.btn-primary:hover{
->>>>>>> f971f2824d17b484dc3da89a523e5779c1c35059
    box-shadow: 2px 1px 2px 3px #99ccff;
    background:#5900a6;
    color:#fff;
    transition: background-color 1.15s ease-in-out,border-color 1.15s ease-in-out,box-shadow 1.15s ease-in-out;
-<<<<<<< HEAD
-   
-=======
   
->>>>>>> f971f2824d17b484dc3da89a523e5779c1c35059
 }	 
 input.ng-touched {
     border-left:5px solid red;
@@ -171,9 +163,5 @@ input.ng-touched {
     color:lightblue;
     margin-right: 125px;
   }
-<<<<<<< HEAD
-   
-=======
->>>>>>> f971f2824d17b484dc3da89a523e5779c1c35059
   
      

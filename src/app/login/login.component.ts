@@ -1,27 +1,17 @@
-<<<<<<< HEAD
-import { Component, OnInit } from '@angular/core';
 
-import { FormControl,FormControlName,FormGroup,Validators } from '@angular/forms';
-=======
+
 import { ViewserviceService } from './../viewlibrarian/viewservice.service';
 import { Component, OnInit } from '@angular/core';
 import { NavigationExtras } from '@angular/router';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormControl,FormControlName,FormGroup,Validators } from '@angular/forms';
 import { Libdetails } from '../viewlibrarian/libdetails';
->>>>>>> f971f2824d17b484dc3da89a523e5779c1c35059
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent  {
-<<<<<<< HEAD
-  aduser="";
-  adpass="";
-  ngOnIt():void{
-    
-=======
 
     pass!:string;
     user!:string;
@@ -31,7 +21,6 @@ export class LoginComponent  {
     ngOnIt():void{
 
 
->>>>>>> f971f2824d17b484dc3da89a523e5779c1c35059
  }
  loginForm=new FormGroup({
   adminuser:new FormControl("",Validators.required),
@@ -41,26 +30,6 @@ export class LoginComponent  {
 
 
 })
-<<<<<<< HEAD
- 
-  
- get adminuser(){return this.loginForm.get('adminuser')}
-   valid(): void{
-     if(this.aduser=="admin" && this.adpass=="admin123")
-     alert("Login Successful!!")
-   }
-  constructor() {
-   }
-   
- }
-
-
-
-
-
-
- 
-=======
 
 
 
@@ -110,4 +79,3 @@ export class LoginComponent  {
 
 
 
->>>>>>> f971f2824d17b484dc3da89a523e5779c1c35059

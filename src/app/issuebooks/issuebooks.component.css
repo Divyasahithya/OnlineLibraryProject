@@ -15,11 +15,6 @@ h1{
  
     
 }
-<<<<<<< HEAD
-
-
-=======
->>>>>>> f971f2824d17b484dc3da89a523e5779c1c35059
 .main{
     padding: 40px 0;
 }
@@ -43,25 +38,6 @@ h1{
 box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
  
 }
-<<<<<<< HEAD
-
-.button {border-radius: 600px;
-min-height: max-content;
-min-width: max-content;}
-
-span{
-    color:red;
-}
- .submit{
-     color:white;
- }
-input.ng-touched{
-    border-left:2px solid red;
-}
-input.ng-valid{
-  border:2px solid green;
-}
-=======
 span.input-group-addon i {
    color: #009edf;
    font-size: 17px;
@@ -72,4 +48,3 @@ min-width: max-content;}
  .submit{
      color: white;
  }
->>>>>>> f971f2824d17b484dc3da89a523e5779c1c35059

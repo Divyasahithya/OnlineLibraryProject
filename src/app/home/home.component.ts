@@ -1,10 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-<<<<<<< HEAD
-import { trigger, transition, animate, style , state } from '@angular/animations';
-declare var anime: any; 
-=======
 import { trigger, transition, animate, style , state } from '@angular/animations'
->>>>>>> f971f2824d17b484dc3da89a523e5779c1c35059
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',

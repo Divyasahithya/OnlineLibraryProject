@@ -37,10 +37,6 @@ get quantity(){
  
   onSubmit() {
     // TODO: Use EventEmitter with form value
-<<<<<<< HEAD
-    
-=======
->>>>>>> f971f2824d17b484dc3da89a523e5779c1c35059
    
   }
   constructor(private location: Location,private addservice:AddserviceService) { }
