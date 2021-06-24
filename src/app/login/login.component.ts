@@ -13,7 +13,10 @@ import { Libdetails } from '../viewlibrarian/libdetails';
 })
 export class LoginComponent  {
 
-    
+    pass!:string;
+    user!:string;
+    libuser!:string;
+    libpass!:string;
     librarian:Libdetails[]=[];
     ngOnIt():void{
 }
@@ -54,7 +57,7 @@ adminLogin():any{
      if(flag==0){
       alert("Invalid Username  or Password!!")
     }
- 
+
    }
 }
 

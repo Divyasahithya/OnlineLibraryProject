@@ -14,24 +14,36 @@ li img{
   font-size:30px;
   text-align: center;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
- 
+
 }
 .c2 {
-  
+
   font-weight: bold;
   font-size:30px;
   text-align: center;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
- 
+
 }
- 
+
 .c2 .letter {
   display: inline-block;
   line-height: 1em;
 }
- 
+
 p{
     font-size: xx-large;
     font-weight: bold;
 }
- 
+@keyframes changeHeight {
+  0% {height: 30px}
+  10% {height: 30px}
+  50% {height: 400px}
+  60% {height: 400px}
+  100% {height: 30px}
+}
+
+div, footer {
+  text-align: center;
+  font-size: small;
+}
+
