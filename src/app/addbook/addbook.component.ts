@@ -9,7 +9,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./addbook.component.css']
 })
 export class AddbookComponent implements OnInit {
-   addbook:addbook =new addbook("","","","",0,"1","");
+   addbook:addbook =new addbook("","","","",0,0,"");
    message:any;
    addbookForm= new FormGroup({
     Callno: new FormControl('', [Validators.required,Validators.minLength(3)]),

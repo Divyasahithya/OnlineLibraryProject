@@ -13,10 +13,7 @@ import { Libdetails } from '../viewlibrarian/libdetails';
 })
 export class LoginComponent  {
 
-    pass!:string;
-    user!:string;
-    Libuser!:string;
-    Libpass!:string;
+    
     librarian:Libdetails[]=[];
     ngOnIt():void{
 }
@@ -26,12 +23,15 @@ export class LoginComponent  {
   libuser:new FormControl("",Validators.required),
   libpass:new FormControl("",Validators.required)
 })
-get adminuser(){return this.loginForm.get('adminuser')}
+getadminuser(){return this.loginForm.get('adminuser')?.value}
+getlibuser():string{return this.loginForm.get('libuser')?.value}
+getlibpass():string{return this.loginForm.get('libpass')?.value}
+getadminpass():string{return this.loginForm.get('adminpass')?.value}
 
   constructor(private router:Router,private route:ActivatedRoute,private lib:ViewserviceService) {
    }
 adminLogin():any{
-    if(this.user=="admin" && this.pass=="admin123")
+    if(this.getadminuser()=="admin" && this.getadminpass()=="admin123")
     {
      this.router.navigate(["./adminpage"],{ relativeTo: this.route });
     }
@@ -45,12 +45,10 @@ adminLogin():any{
     this.lib.getLibrarian().subscribe(
        data =>{this.librarian=data}
      )
-     console.log(this.Libuser + this.Libpass);
-     for(let libr of this.librarian){
-     if(this.Libuser==(libr.fname) && this.Libpass==libr.password){
+    for(let libr of this.librarian){
+     if(this.getlibuser()==(libr.fname) && this.getlibpass()==libr.password){
        flag=1;
-      
-       this.router.navigate(['./libpage'],{ relativeTo: this.route });
+      this.router.navigate(['./libpage'],{ relativeTo: this.route });
        break;
      }}
      if(flag==0){

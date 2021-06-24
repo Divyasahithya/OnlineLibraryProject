@@ -40,7 +40,7 @@ back():void{
 }
 return():void
   { let flag=0;
-    this.Issuebook=this.returnBook.returnIssuebook();
+    this.Issuebook=this.returnBook.returnissuebook();
     this.book=this.returnBook.returnbook();
       for(let b of this.Issuebook){
         if(b.callno==this.callno && b.stu_id==this.studentid)
@@ -58,5 +58,6 @@ return():void
       else{
         alert("Book Returned Successfully!!");
       }
+      this.returnForm.reset();
   }
 }

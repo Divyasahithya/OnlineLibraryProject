@@ -6,6 +6,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { ViewbookserviceService } from '../viewbooks/viewbookservice.service';
 import { Viewbooks } from '../viewbooks/viewbooks';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ReturnserviceService } from '../returnbook/returnservice.service';
 HttpErrorResponse
 @Component({
   selector: 'app-issuebooks',
@@ -14,7 +15,7 @@ HttpErrorResponse
 })
 export class IssuebooksComponent implements OnInit {
  book:Viewbooks[]=[];
-  constructor(private location:Location,private booksissued:IssueserviceService,private bookservice:ViewbookserviceService) { }
+  constructor(private location:Location, private returnservice:ReturnserviceService, private booksissued:IssueserviceService,private bookservice:ViewbookserviceService) { }
   addissuebook:issuebook = new issuebook(0,"",0,"","","no");
   message:any;
   issuebook = new FormGroup(
@@ -46,14 +47,18 @@ back():void{
 }
 AddIssueBook(): void{
   let flag=0;
+  
   this.bookservice.getBooks().subscribe(
     data =>{this.book=data}
   );
       for(let b of this.book){
       
-        if(b.callno==this.addissuebook.callno)
+        if(b.callno==this.addissuebook.callno && b.quantity>0)
         { 
         let resp=this.booksissued.Add(this.addissuebook);
+        b.quantity-=1;
+        b.issued+=1;
+        this.returnservice.updateQuan(b).subscribe();
        resp.subscribe((data)=>this.message=data);
        alert("Book Issued Successfully!!");
        flag=1;

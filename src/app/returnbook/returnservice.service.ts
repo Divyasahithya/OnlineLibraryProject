@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { catchError } from 'rxjs/operators';
+import { Observable, throwError } from 'rxjs';
+import { retry,catchError } from 'rxjs/operators';
 import { issuebook } from '../issuebooks/issuebook';
 import { Viewbooks } from '../viewbooks/viewbooks';
 import { ViewbookserviceService } from '../viewbooks/viewbookservice.service';
@@ -14,6 +14,7 @@ export class ReturnserviceService {
  Issuebook: issuebook[]=[];
  book:Viewbooks[]=[];
  private baseUrl="http://localhost:8080/api/issueBooks";
+ private baseUrl1="http://localhost:8080/api/books";
   constructor(private viewissue:ViewissueserviceService,private httpClient:HttpClient, private viewbook:ViewbookserviceService) { }
   returnissuebook(): issuebook[]{
     this.viewissue.getIssueBook().subscribe(
@@ -21,6 +22,11 @@ export class ReturnserviceService {
      )
       return this.Issuebook;
   }
+  httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json'
+    })
+  } 
   returnbook(): Viewbooks[]{
     this.viewbook.getBooks().subscribe(
       data =>{this.book=data}
@@ -34,17 +40,39 @@ export class ReturnserviceService {
       {
         item.quantity+=1;
         item.issued-=1;
-        this.updateQuan(item);
+        this.updateQuan(item).subscribe();
+        break;
       }
     }
   }
-  updateStatus(b:issuebook): Observable<void> {
-    return this.httpClient.put<void>(this.baseUrl +"/"+b.ID, b)
+  updateStatus(b:issuebook): Observable<issuebook> {
+    let id=b.id;
+    return this.httpClient.put<issuebook>(this.baseUrl +"/"+id, JSON.stringify(b), this.httpOptions).pipe(
+      retry(1),
+      catchError(this.handleError)
+    );
     }
-    updateQuan(b:Viewbooks): Observable<void> {
-
-      return this.httpClient.put<void>(this.baseUrl +"/"+b.ID, b)
+    updateQuan(b:Viewbooks): Observable<Viewbooks> {
+     let id=b.id;
+      return this.httpClient.put<Viewbooks>(this.baseUrl1 +"/"+id,JSON.stringify(b), this.httpOptions).pipe(
+        retry(1),
+        catchError(this.handleError)
+      );
       }
-}
+      handleError(error: { error: { message: string; }; status: any; message: any; }) {
+        let errorMessage = '';
+        if(error.error instanceof ErrorEvent) {
+          // Get client-side error
+          errorMessage = error.error.message;
+        } else {
+          // Get server-side error
+          errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
+        }
+        window.alert(errorMessage);
+        return throwError(errorMessage);
+     }
+   
+   }
+
 
 

@@ -6,13 +6,13 @@
           <img class="card-img-top" *ngIf="view1.gender=='male';else myelseblock" src="../../assets/Images/male.png"  height=150px   alt="Card image cap">
          <ng-template #myelseblock> <img class="card-img-top"  src="../../assets/Images/female.webp" height=150px  alt="Card image cap"></ng-template>
           <div class="card-body mb">
-            <h3 class="card-title">{{ view1.L_ID }}</h3>
+            <h3 class="card-title">{{ view1.l_ID }}</h3>
             <h3 class="card-title">{{ view1.fname }} {{view1.lname}}</h3>
              <h5 class="card-text">Email : {{view1.mail}}</h5>
           <h5 class="card-text">Gender: {{view1.gender}}</h5>
           <h5 class="card-text">Password: {{view1.password}}</h5>
            <h5 class="card-text">Phone: {{view1.phone}}</h5>
-            <button type="button" class="btn btn-primary mb" (click)="deletelibrarian(view1.L_ID)">Delete Librarian</button>
+            <button type="button" class="btn btn-primary mb" (click)="deletelibrarian(view1.l_ID)">Delete Librarian</button>
           </div>
         </div>
     </div><br>

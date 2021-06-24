@@ -1,7 +1,4 @@
 
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <body>
  <div class="login-wrap">
     <div class="login-html">
@@ -12,7 +9,7 @@
             <div class="sign-in-htm">
                 <div class="group">
                     <label for="user" class="label">Callno</label>
-                    <input id="user" type="text" class="input" formControlName="Callno" required pattern="[A-Z]{1}[/-]{1}[0-9]*" [(ngModel)]="callno">
+                    <input id="user" type="text" class="input" formControlName="Callno" required pattern [(ngModel)]="callno">
                     <span  *ngIf="returnForm.controls['Callno'].errors?.required && returnForm.controls['Callno'].touched" >
                         CALLNO is required.
                    </span>
