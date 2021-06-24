@@ -1,25 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head><link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-</head>
-<!------ Include the above in your HEAD tag ---------->
+
 <body>
 
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
           <div class="navbar-header">
             <p class="navbar-brand"><img src="../../assets/Images/ICON.gif" width="50" height="50" class="d-inline-block align-top" alt="">ONLINE LIBRARY</p>
-
-            <ul class="nav">
+              <ul class="nav">
               <li ><a routerLink="**">HOME</a></li>
               <li><a >LOGIN</a></li>
              <li><a  routerLink="libpage/viewbook">BOOK DETAILS</a></li>
               <li><a routerLink="aboutus" >ABOUT US</a></li>
             </ul>
-
-          </div>
+             </div>
         </div>
       </nav>
       <div class="container login-container">
@@ -43,14 +37,15 @@
                     </form>
                 </div>
                 <div class="col-md-6 login-form-2">
+
                     <h3>Login As Librarian</h3>
                     <form [formGroup]="loginForm">
                         <div class="form-group">
-                            <input type="text" class="form-control" formControlName="libuser" placeholder="Username *" /><!--value= [(ngModel)]="Libuser" -->
+                            <input type="text" class="form-control" formControlName="libuser" placeholder="Username *" value="" [(ngModel)]="Libuser"  />
                             <span class="error" *ngIf="loginForm.controls['libuser'].errors?.required && loginForm.controls['libuser'].touched" >UserName is Required</span>
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control"  formControlName="libpass"placeholder="Your Password *" /><!--value="" [(ngModel)]="Libpass" />-->
+                            <input type="password" class="form-control"  formControlName="libpass"placeholder="Your Password *" value="" [(ngModel)]="Libpass" />
                             <span class="error" *ngIf="loginForm.controls['libpass'].errors?.required && loginForm.controls['libpass'].touched" >Password is Required</span>
                         </div>
                         <div class="form-group">

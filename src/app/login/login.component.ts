@@ -13,8 +13,8 @@ export class LoginComponent  {
 
     pass!:string;
     user!:string;
-    libuser!:string;
-    libpass!:string;
+    Libuser!:string;
+    Libpass!:string;
     librarian:Libdetails[]=[];
     ngOnIt():void{
 
@@ -55,9 +55,9 @@ export class LoginComponent  {
     this.lib.getLibrarian().subscribe(
        data =>{this.librarian=data}
      )
-     console.log(this.libuser + this.libpass);
+     //console.log(this.Libuser + this.libpass);
      for(let libr of this.librarian){
-     if(this.libuser==(libr.fname) && this.libpass==libr.password){
+     if(this.Libuser==(libr.fname) && this.Libpass==libr.password){
        flag=1;
 
        this.router.navigate(['./libpage'],{ relativeTo: this.route });
