@@ -20,6 +20,8 @@ import { StartComponent } from './start/start.component';
 import { ViewserviceService } from './viewlibrarian/viewservice.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AboutusComponent } from './aboutus/aboutus.component';
+import { UpdatelibrarianComponent } from './updatelibrarian/updatelibrarian.component';
+import { UpdateserviceService } from './updatelibrarian/updateservice.service';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,8 @@ import { AboutusComponent } from './aboutus/aboutus.component';
     ReturnbookComponent,
     AdminpageComponent,
     StartComponent,
-    AboutusComponent
+    AboutusComponent,
+    UpdatelibrarianComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +49,7 @@ import { AboutusComponent } from './aboutus/aboutus.component';
     ReactiveFormsModule
   ],
   providers: [LoginService,
-  
+    UpdateserviceService,
     ViewserviceService],
   bootstrap: [AppComponent]
 })

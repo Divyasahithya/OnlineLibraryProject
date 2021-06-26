@@ -4,8 +4,9 @@ body{
   background-size:cover;
   width:100%;
   height:100vh;
-  overflow:auto;
+  overflow:hidden;
 }
+
  
 h1{
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -14,52 +15,120 @@ h1{
   text-align: center;
   color: whitesmoke;
 }
+.start{
+  position: relative;
+}
+.box{
+position:absolute;
+top:20%;
+margin-left:800px;
  
+}
+.animate {
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
 h3{
-  font-family: cursive;
-  position: relative;
-  margin: 0;
-position: absolute;
-right:38%;
-bottom:57%;
+
+margin-left: 0px;
+  font-family:fantasy;
 font-size: xx-large;
--ms-transform: translateY(-50%);
-transform: translateY(-50%);
-  color: whitesmoke;
+letter-spacing: 1px;
+color: whitesmoke;
+}
+ 
+h6{
+font-family: cursive;
+width:700px;
+height:170px;
+line-height:1.7;
+font-size: x-large;
+color: whitesmoke;
  
 }
-h5{
-  font-family: cursive;
-  position: relative;
-  margin: 0;
-position: absolute;
-right:35%;
-bottom:40%;
--ms-transform: translateY(-50%);
-transform: translateY(-50%);
-  color: whitesmoke;
-  
-}
+
 .c1 {
   font-size: 90px;
   overflow: hidden;
   color: whitesmoke;
+}
+p {
+  border-right: solid 5px rgba(255,255,255,.75);
+  white-space: nowrap;
+  overflow: hidden;  
+  font-family: cursive;  
+  font-family: 'Source Code Pro', monospace;  
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 150px;
+  color: rgba(252, 246, 246, 0.925);
+ 
+  
+}
+
+/* Animation */
+p {
+  animation: animated-text 6s linear 1s infinite normal both,
+             animated-cursor 600ms linear infinite;
+}
+
+/* text animation */
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width:1200px;}
+  
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
 }
  
  
  
 #button
 {
-    color:black;
-  text-align: center;
-  background-color:white;
-  margin-left:450px;
-  margin: 0;
-position: absolute;
-top: 50%;
-right:45%;
--ms-transform: translateY(-50%);
-transform: translateY(-50%);
+  color:black;
+text-align: center;
+background-color:white;
+margin: 0;
 height: 50px;
 width: 130px;
 border-radius: 12px;

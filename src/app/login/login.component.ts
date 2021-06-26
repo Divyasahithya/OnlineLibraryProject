@@ -6,6 +6,7 @@ import { NavigationExtras } from '@angular/router';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormControl,FormControlName,FormGroup,Validators } from '@angular/forms';
 import { Libdetails } from '../viewlibrarian/libdetails';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -19,6 +20,9 @@ export class LoginComponent  {
     libpass!:string;
     librarian:Libdetails[]=[];
     ngOnIt():void{
+      
+      
+      
 }
  loginForm=new FormGroup({
   adminuser:new FormControl("",Validators.required),
@@ -46,10 +50,10 @@ adminLogin():any{
   LibLogin(): void{
     let flag=0;
     this.lib.getLibrarian().subscribe(
-       data =>{this.librarian=data}
-     )
+      data =>{this.librarian=data});
+     
     for(let libr of this.librarian){
-     if(this.getlibuser()==(libr.fname) && this.getlibpass()==libr.password){
+     if(this.getlibuser()==(libr.mail) && this.getlibpass()==libr.password){
        flag=1;
       this.router.navigate(['./libpage'],{ relativeTo: this.route });
        break;

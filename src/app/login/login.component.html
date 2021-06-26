@@ -12,7 +12,6 @@
             <ul class="nav">
               <li ><a routerLink="**">HOME</a></li>
               <li><a >LOGIN</a></li>
-             <li><a  routerLink="libpage/viewbook">BOOK DETAILS</a></li>
               <li><a routerLink="aboutus" >ABOUT US</a></li>
             </ul>
           </div>
@@ -22,7 +21,7 @@
             <div class="row">
                 <div class="col-md-6 login-form-1">
                     <h3>Login as Admin</h3>
-                    <form [formGroup]="loginForm">
+                    <form [formGroup]="loginForm" autocomplete="off">
                         <div class="form-group">
                             <input type="text"  class="form-control" formControlName="adminuser" placeholder="Username *" name="user"   required  />
                             <span class="error" *ngIf="loginForm.controls['adminuser'].errors?.required && loginForm.controls['adminuser'].touched" >UserName is Required</span>
@@ -39,13 +38,13 @@
                 </div>
                 <div class="col-md-6 login-form-2">
                     <h3>Login As Librarian</h3>
-                    <form [formGroup]="loginForm">
+                    <form [formGroup]="loginForm" autocomplete="off">
                         <div class="form-group">
-                            <input type="text" class="form-control" formControlName="libuser" placeholder="Username *" /><!--value= [(ngModel)]="Libuser" -->
+                            <input type="text" class="form-control" formControlName="libuser" placeholder="Username(Email) *" />
                             <span class="error" *ngIf="loginForm.controls['libuser'].errors?.required && loginForm.controls['libuser'].touched" >UserName is Required</span>
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control"  formControlName="libpass"placeholder="Your Password *" /><!--value="" [(ngModel)]="Libpass" />-->
+                            <input type="password" class="form-control"  formControlName="libpass"placeholder="Your Password *" />
                             <span class="error" *ngIf="loginForm.controls['libpass'].errors?.required && loginForm.controls['libpass'].touched" >Password is Required</span>
                         </div>
                         <div class="form-group">

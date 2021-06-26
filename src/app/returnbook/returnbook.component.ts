@@ -46,17 +46,19 @@ return():void
         if(b.callno==this.callno && b.stu_id==this.studentid)
         { 
            flag=1;
+           if(b.returnstatus=="yes"){
+             alert("Book has been returned already!!");
+             break;
+           }
            b.returnstatus="yes";
            this.returnBook.updateStatus(b).subscribe();
            this.returnBook.Find(b.callno);
+           alert("Book Returned Successfully and Status has been updated!!");
            break;
       } }
       if(flag==0)
       {
         alert("Invalid callno or studentid");
-      }
-      else{
-        alert("Book Returned Successfully!!");
       }
       this.returnForm.reset();
   }

@@ -1,12 +1,11 @@
 body {
-  background:url("../../assets/Images/returnbook.jpg");
-  background-size: cover;
+  background:url("https://i.pinimg.com/564x/1b/aa/57/1baa577b439c9229d0663d9011629c3d.jpg");
   text-align: center;
   background-repeat:no-repeat;
   background-size:cover;
   width:100%;
   height:100vh;
-  overflow:auto;
+  overflow:hidden;
 
 }
 :after,:before{box-sizing:border-box}
@@ -15,6 +14,7 @@ body {
 a{color:inherit;text-decoration:none}
 
 .login-wrap{
+  top:15px;
   width: 100%;
   margin:auto;
   max-width:510px;

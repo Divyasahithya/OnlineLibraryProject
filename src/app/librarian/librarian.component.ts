@@ -8,6 +8,8 @@ import { NgModule } from '@angular/core';
 
 
 import { FormControl, FormGroup, Validators} from '@angular/forms';
+import { ViewserviceService } from '../viewlibrarian/viewservice.service';
+import { Libdetails } from '../viewlibrarian/libdetails';
 
 @Component({
   selector: 'app-librarian',
@@ -15,9 +17,10 @@ import { FormControl, FormGroup, Validators} from '@angular/forms';
   styleUrls: ['./librarian.component.css']
 })
 export class LibrarianComponent implements OnInit {
-  addlibrarian:addlibrarian = new addlibrarian("","","","",'',"");
+  addlibrarian:addlibrarian = new addlibrarian("","","","","",'',"");
   message:any;
-  constructor(private location: Location,private librarian:LibrarianService) { }
+  librarians:Libdetails[]=[];
+  constructor(private location: Location,private librarian:LibrarianService,private getlib:ViewserviceService) { }
   wholeForm=new FormGroup({
     pass:new FormControl('',Validators.required),
     finame:new FormControl('',Validators.required),
@@ -54,14 +57,29 @@ export class LibrarianComponent implements OnInit {
   }
 
 AddLibrarian(): void{
-  let resp=this.librarian.Add(this.addlibrarian);
-  resp.subscribe((data)=>this.message=data);
-  alert("Librarian Added Successfully!!");
+  let flag=0;
+  this.getlib.getLibrarian().subscribe(
+    data =>{this.librarians=data}
+  );
+      for(let b of this.librarians){
+      
+        if(b.mail==this.addlibrarian.mail )
+        {
+           alert("This Librarian mail is already added!!Please give another Email");
+            flag=1;
+            break;
+          }
+      }
+      if(flag==0){
+      let resp=this.librarian.Add(this.addlibrarian);
+      resp.subscribe((data)=>this.message=data);
+      alert("Librarian Added Successfully!!");
+      this.getlib.getLibrarian().subscribe(
+        data =>{this.librarians=data}
+      );}
+this.wholeForm.reset();
+
+
 
 }
-
-
-
-
-
 }

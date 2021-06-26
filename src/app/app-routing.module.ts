@@ -11,6 +11,7 @@ import { LibrarianComponent } from './librarian/librarian.component';
 import { LoginComponent } from './login/login.component';
 import { ReturnbookComponent } from './returnbook/returnbook.component';
 import { StartComponent } from './start/start.component';
+import { UpdatelibrarianComponent } from './updatelibrarian/updatelibrarian.component';
 import { ViewbooksComponent } from './viewbooks/viewbooks.component';
 import { ViewissuedbooksComponent } from './viewissuedbooks/viewissuedbooks.component';
 import { ViewlibrarianComponent } from './viewlibrarian/viewlibrarian.component';
@@ -28,6 +29,7 @@ const routes: Routes = [
     {path:'home/login/adminpage',component:AdminpageComponent},
     {path:'home/login/adminpage/librarian',component:LibrarianComponent},
     {path:'home/login/adminpage/viewlibrarian',component:ViewlibrarianComponent},
+    {path:'home/login/adminpage/viewlibrarian/update',component:UpdatelibrarianComponent},
     {path:'home/login/libpage/addbook',component:AddbookComponent},
     {path:'home/login/libpage/viewbook',component:ViewbooksComponent},
     {path:'home/login/libpage/viewbook',component:ViewbooksComponent},

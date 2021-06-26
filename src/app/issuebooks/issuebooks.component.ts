@@ -53,8 +53,14 @@ AddIssueBook(): void{
   );
       for(let b of this.book){
       
-        if(b.callno==this.addissuebook.callno && b.quantity>0)
-        { 
+        if(b.callno==this.addissuebook.callno )
+        {  if(b.quantity==0){
+            alert("BOOK IS NOT AVAILABLE!!!");
+            flag=1;
+           
+            break;
+           
+        }
         let resp=this.booksissued.Add(this.addissuebook);
         b.quantity-=1;
         b.issued+=1;
@@ -69,4 +75,6 @@ AddIssueBook(): void{
 if(flag==0){
   alert("Invalid Callno!!!");
 }
-}}
+this.issuebook.reset();
+}
+}
